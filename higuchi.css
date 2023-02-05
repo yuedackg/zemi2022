@@ -1,0 +1,81 @@
+/* @import url(./ckg_style_const.css); */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+header,
+nav,
+main,
+div {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+    /* width: var(--my-screen-wdith); */
+    width: var(--my-screen-width);
+    margin: auto;
+}
+
+nav {
+    width: 20%;
+}
+
+main {
+    width: 80%;
+}
+
+.leftmeny {
+    width: 100%;
+}
+
+.MaeAtosiai {
+    justify-content: space-around;
+}
+
+th {
+    color: white;
+    background-color: green;
+}
+
+td {
+    color: white;
+    background-color: green;
+}
+
+.ScoreBoardName {
+    width: 200px;
+}
+
+td {
+    width: 50px;
+    padding: 5px;
+    text-align: center;
+}
+
+#headerSize {
+    width: 1000px;
+    height: 100px;
+}
+
+nav .leftmeny {
+    background-color: skyblue;
+    padding: 5px;
+    width: calc(150px);
+    margin: 5px;
+    /* margin-right: -10px; */
+    box-sizing: border-box
+}
+
+.日付 {
+    background-color: skyblue;
+    margin: 5px;
+    margin-bottom: 5px;
+}
+
+.名 {
+    background-color: skyblue;
+    margin: 5px;
+}

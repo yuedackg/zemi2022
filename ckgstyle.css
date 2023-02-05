@@ -1,0 +1,29 @@
+@import url(./ckg_style_const.css);
+
+    .table,td{
+        border: solid 1px var(--my-table-border-color); 
+        
+    }
+
+    .seiseki{
+        color:  var(--my-table-seiseki-midasi);
+        font-size: 30pt;
+    }
+    .kousikisen{
+        background-color: var(--my-section-bg-color) ;
+        width: var(--my-screen-haba);
+    }
+    th{
+        color: blue;
+    }
+    .taikaimei{
+        background-color: beige;
+        color: orangered;
+    }
+    td{
+        padding-left: var(--my-table-cell-padding);
+    }
+
+:root{
+
+}

@@ -1,0 +1,10 @@
+div{
+    /* border: solid 1px red; */
+    box-sizing: border-box;
+    /* box構造をわかりやすくするために追加 　完成するときには省いて調整*/
+    padding: 5px   ;
+}
+body{
+    width: 800px;
+    margin: auto;
+}

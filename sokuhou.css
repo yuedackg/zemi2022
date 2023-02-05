@@ -1,0 +1,18 @@
+#child1 {
+    background-color: lightblue;
+  }
+  #child2 {
+    background-color: lightgreen;
+  }
+
+  @media (min-width: 600px) {
+    #parent {
+      display: flex;
+    }
+    #child1 {
+      flex-grow: 1;
+    }
+    #child2 {
+      flex-grow: 1;
+    }
+  }

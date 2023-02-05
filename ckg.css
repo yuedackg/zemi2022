@@ -1,0 +1,152 @@
+@import url(./ckgbase.css);
+
+
+body{
+    width: var(--my-content-width);
+    margin: auto;
+    background-image:url(./image/iruka.png);
+    background-color: rgba(255, 255, 255, 0.8);
+    background-blend-mode: lighten;
+    
+}
+
+nav div{
+    width: calc(800px / 6);
+    justify-content: space-around;
+    border: solid 1px var(--my-div-border-color);
+    border: 1px solid blue;
+}
+nav{
+    color: rgb(8, 8, 120);
+    font-weight: bold;
+    font-size: 15px;
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    text-align: center;
+}
+iframe{
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+
+#css-suraido{
+    width: 800px;
+    height: 300px;
+    overflow: hidden;
+    border: solid 1px var(--my-div-border-color);
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.suraido-item{
+    width: 800px;
+    height: 280px;
+    float: left;
+    position: relative;
+}
+.suraido-item2{
+    width: 800px;
+    height: 280px;
+    float: left;
+    position: relative;
+}
+.suraido-item3{
+    width: 800px;
+    height: 280px;
+    float: left;
+    position: relative;
+}
+.suraido-wrapper{
+    width: 800%;
+    position: relative;
+    left: 0;
+    will-change: transform;
+    animation: suraido 25s infinite;
+}
+@keyframes suraido {
+    0%{transform: translateX(0);}
+    33%{transform: translateX(-800px);}
+    66%{transform: translateX(-1600px);}
+    100%{transform: translateX(0);}
+}
+.douga{
+    display: flex;
+    flex-wrap: wrap;
+}
+.douga div{
+    width: calc(800px / 2);
+    padding: 0 10px;
+    box-sizing: border-box;
+    display: flex;
+}
+.saito{
+    width: 16%;
+    padding: 0.5em 1em;
+    font-weight: bold;
+    margin: 2em 0;
+    color: black;
+    background: #6eb7ff;
+    border-bottom: solid 6px blue;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+    border-radius: 9px;
+}
+.flex{
+    display: flex;
+    margin-left: 140px;
+    
+}
+.flex p{
+    width: 64%;
+    font-size: 20px;
+    text-align: left;
+    margin-left: 70px;
+    font-weight: bold;
+    background-color: #6eb7ff;
+}
+.namae{
+    width: 20%;
+}
+.annnai{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+.annnai div{
+    width: calc(800px / 2);
+    padding: 0 50px;
+    box-sizing: border-box;
+    display: flex;
+}
+.box{
+    position: relative;
+}
+.bottom-left{
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    bottom: 1px;
+}
+.imgDOME{
+    width: 340px;
+    height: 220px;
+}
+.imgOTOIAWASE{
+    width: 340px;
+    height: 220px;
+}
+th,td{
+    font-weight: bold;
+    border: solid 2px blue;
+    margin: 0;
+    background-color: skyblue;
+    text-align: center;
+}
+table{
+    background-color: yellow;
+    width: 800px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
