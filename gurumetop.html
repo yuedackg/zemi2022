@@ -1,0 +1,178 @@
+<!--
+    【製作者情報】
+    学籍番号： 20019
+    氏名：　　　水谷　克希 Mizutani
+-->
+<!-- 
+    残作業
+    ・周辺エリアグルメのコンテンツがない
+    　⇒サブコンテンツ（gurume.html）のプレビューを張り付ける
+    ・フッターの文字列がない
+    ・背景色？背景画像の設定
+    ・メインコンテンツの幅
+    ・行頭部分に学校名やロゴを配置する部分については、index.html（西村）を参考にしてく打差
+    
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* for debug. */
+        div {
+            border: solid 1px gray;
+
+        }
+
+        /* end. */
+
+        :root {
+            --base-bg-color: rgb(241, 226, 226);
+        }
+
+        div {
+            box-sizing: border-box;
+            padding: 5px;
+            margin: auto
+        }
+
+        main {
+            display: flex;
+            flex-direction: row;
+            width: 1500px;
+            margin: auto
+        }
+
+        .gazou {
+            width: 300px;
+            height: 210px;
+        }
+
+        /* 12/16（金）　並びの方向を変える */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        /* 画面デザインについて */
+        body {
+            width: 1300px;
+            margin: auto;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        main {
+            background-color: var(--base-bg-color);
+            ;
+        }
+
+        .moji {
+            font-size: 18pt;
+            font-weight: 900;
+        }
+
+        .gakkou {
+            text-align: center;
+        }
+
+        .tenpo {
+            position: relative;
+        }
+
+        .text {
+            position: absolute;
+
+            bottom: 0;
+            right: 0;
+            left: 0;
+            color: white;
+            text-align: center;
+            /* border: solid 1px red; */
+
+            background-color: var(--my-logo-string-bg-color);
+        }
+
+        /* 残りの下のほうについてのデザイン */
+    </style>
+</head>
+<div class="gakkou"><iframe src="./header.html" frameborder="no" width="1000px" height="130px" id="myHeader"
+        scrolling="no"></iframe></div>
+
+<body>
+    <main>
+        <div>
+            <div class="moji">CKG周辺グルメ</div>
+
+            <div class="container">
+                <div><img src="./image-gurume/tsubohati.jpg" alt="写真1" class="gazou"></div>
+
+                <div><img src="./image-gurume/houraikaku.jpg" alt="写真1" class="gazou"></div>
+
+                <div><img src="./image-gurume/rairaitei.jpg" alt="写真1" class="gazou"></div>
+            </div>
+
+            <div class="moji">周辺エリアグルメ</div>
+
+            <div class="container">
+                <!-- 一つ目 -->
+                <div class="tenpo">
+                    <a href="./area/area3.html" target="_blank">
+                        <div><img src="./image-gurume/3.jpg" alt="tenpo shasin" class="gazou"></div>
+                        <div class="text">
+                            <h1>海豚や</h1>
+                        </div>    
+                    </a>
+                </div>
+                <!-- 二つ目 -->
+                <div class="tenpo">
+                    <a href="./area/area1.html" target="_blank">
+                    <div><img src="./image-gurume/tubohathi.gaikan.jpg" alt="tenpo shasin" class="gazou"></div>
+                    <div class="text">
+                        <h1>壺八</h1>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <!-- 三つ目 -->
+                    <div class="tenpo">
+                        <a href="./area/area2.html" target="_blank">
+                        <div><img src="./image-gurume/houraikaku.gaiken.webp" alt="tenpo shasin" class="gazou"></div>
+                        <div class="text">
+                            <h1>蓬莱閣</h1>
+                        </div>
+                    </div>
+
+                    <!-- 四つ目 -->
+                    <div class="tenpo">
+                        <a href="./area/area4.html" target="_blank">
+                        <div><img src="./image-gurume/rairaitei.gaiken.jpg" alt="tenpo shasin" class="gazou"></div>
+                        <div class="text">
+                            <h1>来来亭</h1>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="moji">デリバリー紹介</div>
+                <div>
+                    <div><img src="" alt="tenpo shasin"></div>
+                    <div>tenpo mei</div>
+                </div>
+
+
+
+
+            </div>
+    </main>
+
+
+</body>
+
+</html>

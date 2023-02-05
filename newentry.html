@@ -1,0 +1,128 @@
+<!-- 
+    【製作者情報】
+制作ページ：　
+学籍番号：
+氏名：　　藤岡陸
+上流ページ：　
+
+-->
+ <!-- <link rel="stylesheet" href="sample.css"> -->
+<!-- 
+    残作業
+    ・CSSの中に記述している値はすべて、「:root」の中にあるように文字列で記述するようにする
+　　　できれば、他の部分と同じ名前に変更する
+　　・投手、捕手、内野手などのデザインで、列ごとの余白がとられていない。
+    ・ヘッダの見出しの幅に対して、選手一覧が狭い
+    ・ヘッダの下の余白部分は狭くすること
+    　⇒　済
+ -->
+
+<style>
+    :root {
+        --my-title-color: rgb(215, 245, 255);
+        --my-title-player: rgb( 215,245,255 );
+
+    }
+
+body {
+        width: 800px;
+
+    }
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        /* justify-content: space-around; */
+        
+    }
+
+    .container {
+        /* color: rgb(251, 246, 246); */
+        /* background-color: rgb(4, 143, 250); */
+    }
+
+    .retu {
+        color: black;
+        background-color: red;
+        /* padding: ;
+        margin: ; */
+
+    }
+
+
+    .myTitle {
+        background-color: var(--my-title-color);
+
+    }
+    .players div{
+     background-color:    var(--my-title-player);
+     border: solid 5px rgb(238, 237, 237);
+    }
+    .dummybox{
+        height: 24px;
+    }
+</style>
+<main>
+
+    <!-- <div class="container">
+        <div>ロゴ</div>
+        <div class="teamname">沖データコンピュータ教育学院</div>
+    </div> -->
+    <iframe src="./header.html" frameborder="0" width="1000px"></iframe>
+
+    <div class="myTitle">新入団選手</div>
+    <div class="container">
+        <div >
+            <div>
+                <div>投手</div>
+            </div>
+            <div class="players">
+                <div><a href="./players/11mattutake.html">  #１１　松竹　嬉竜</a></div>
+                <div><a href="./players/13kikuchi.html">  #１３　菊池　真冴也</a></div>
+                <div><a href="./players/29yoshida.html">  #２９　吉田　英寿</a></div>
+                <div><a href="./players/36higashi.html">  #３６　東　明信</a></div>
+                <div><a href="./players/46oseto.html">  #４６　大世戸　恋</a></div>
+            </div>
+        </div>
+        <div>
+            <div>
+                <div>捕手</div>
+            </div>
+            <div class="players">
+                <div><a href="./players/40maeno.html">  #４０　前野　航太郎</a></div>
+                <div><a href="./players/88yoshida.html">  #８８　吉田　光希</a></div>
+                <div class="dummybox"></div>
+                <div class="dummybox"></div>
+                <div class="dummybox"></div>
+                
+            </div>
+        </div>
+        <div>
+            <div>
+                <div>内野手</div>
+            </div>
+            <div class="players">
+                <div><a href="./players/1kouda.html">  #１　　江田　柊斗</a></div>
+                <div><a href="./players/5nakanishi.html">  #５　　中西　歩夢</a></div>
+                <div><a href="./players/39koike.html">  #３９　小池　琉昂</a></div>
+                <div><a href="./players/65higashida.html">  #６５　東田　琉世</a></div>
+                <div><a href="./players/98wakamatu.html">  #９８　若松　洋誠</a></div>
+            </div>
+        </div>
+        <div>
+            <div>
+                <div>外野手</div>
+            </div>
+            <div class="players">
+                <div><a href="./players/8kajihara.html">  #８　　梶原　周挙</a></div>
+                <div><a href="./players/44iwakiri.html">  #４４　岩切　青空</a></div>
+                <div><a href="./players/53nakamura.html">  #５３　中村　勝斗</a></div>
+                <div><a href="./players/54yamaguchi.html">  #５４　山口　朝輝</a></div>
+                <div><a href="./players/81nakamura.html">  #８１　中村　匠志</a></div>
+            </div>
+        </div>
+    </div>
+
+
+
+</main>

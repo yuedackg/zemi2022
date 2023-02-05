@@ -1,0 +1,188 @@
+<!--
+    製作者情報
+    学籍番号：20006
+    氏名：　　西村雄大
+    上位ページ：ー
+    
+-->
+<!-- 
+    ・背景画像の薄さを調整する
+    　aタグのhrefでジャンプ先のファイル名を指定してください。
+    ・メニューにカーソルをやったら中身を表示させる
+         ⇒　次を参考に　https://www.asobou.co.jp/blog/web/css-dropdown
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>沖データコンピュータ教育学院</title>
+    <link rel="stylesheet" href="ckg.css">
+</head>
+
+<body>
+    <iframe src="./header.html" frameborder="no" width="1000px" height="130px" id="myHeader"
+        scrolling="no"></iframe>
+    <nav>
+        <div>
+            <!-- <a href="./siaisokuhou.html">試合情報</a> -->
+            試合情報
+            <style>
+                .menu-sub {
+                    position: absolute;
+                    margin-left: 0px;
+                    padding: 0;
+                    display: none;
+                    z-index: 100;
+                    background-color: white;
+                    list-style-type: none;
+                }
+
+                .menu-sub li {
+                    box-sizing: border-box;
+                    border: solid 1px grey;
+                    padding: 0;
+                    margin: 0;
+                }
+
+                .menu-sub.open {
+                    margin-top: -0px;
+                    display: block;
+                }
+
+                .menu-sub li a {
+                    color: blue;
+                    padding: 5px;
+                    margin-left: -5px;
+                    display: block;
+                    text-decoration: none;
+                }
+            </style>
+            <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+            <script>
+                // sub menu
+                // https://rinblog.org/jquery-drop-down-menu/
+                $(function () {
+                    $("nav div").hover(
+                        function () {
+                            $(this).children(".menu-sub").addClass("open");
+                        }, function () {
+                            $(this).children(".menu-sub").removeClass("open");
+                        }
+                    )
+                });
+            </script>
+            <ul class="menu-sub">
+                <li><a href="./siaisokuhou.html">試合情報トップ</a></li>
+                <li><a href="./siaisokuhou.html">試合速報</a></li>
+                <li><a href="./siaisokuhou-sensyuseiseki.html">選手成績</a></li>
+                <li><a href="./teamscore.html">チーム成績</a></li>
+                <li><a href="./players-1.html">選手情報</a></li>
+            </ul>
+        </div>
+        <div>
+            <!-- 樋口製作 -->
+            <!-- <a href="./teaminfo.html">チーム情報</a> -->
+            チーム情報
+
+            <ul class="menu-sub">
+                <li><a href="./teaminfo.html">チーム情報トップ</a></li>
+                <li><a href="./ouenkakouka.html">校歌・応援歌</a></li>
+                <li><a href="./rinen.html">球団理念</a></li>
+                <li><a href="">CKGの歩み</a></li>
+                <li><a href="./ユニフォーム.html">ユニホームの歴史</a></li>
+                <li><a href="./newentry.html">新入生情報</a></li>
+            </ul>
+        </div>
+        <div>
+            <a href="./goods.html">グッズ</a>
+        </div>
+        <div>
+            <a href="./gurumetop.html">グルメ</a>
+        </div>
+        <div>
+            CKGアカデミー
+            <ul class="menu-sub">
+                <li><a href="./ckgacademy.html">CKGアカデミー</a></li>
+                <li><a href="./akademigaiyasyuseiseki.html">CKGアカデミー選手成績</a></li>
+                <li><a href="">スケジュール</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <a href="./アクセスマップ.html">CKGドーム・西畑</a>
+            <ul class="menu-sub">
+                <li><a href="./siaisokuhou-dome.html">CKGドーム</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <div id="css-suraido">
+            <div class="suraido-wrapper">
+                <img src="./img/go-ruball.png" alt="" class="suraido-item">
+                <img src="./img/nyugaku.png" alt="" class="suraido-item2">
+                <img src="./img/hitati.png" alt="" alt="" class="suraido-item3">
+            </div>
+        </div>
+        <div class="douga">
+            <div>
+                <iframe width="500" height="200" src="https://www.youtube.com/embed/t1TRGJoFMkk"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+            <div>
+                <iframe width="500" height="200" src="https://www.youtube.com/embed/lN4puLvDxxI"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="saito">サイトの更新情報</div>
+        <div class="flex">
+            <img src="./img/sennsyu.png" alt="" class="namae">
+            <p>２０２２年度 福岡県野球連盟ベストナイン・クラブベストナインに本校硬式野球部から１名選出されました!　樋口　昇樹　(外野手)</p>
+        </div>
+        <div class="annnai">
+            <div class="box">
+                <a href="./アクセスマップ.html"><img src="./img/CKGDOME.jpg" alt="" class="imgDOME"></a>
+                <p class="bottom-left">CKGドーム・西畑</p>
+            </div>
+            <div>
+                <img src="./img/syugou.jpg" alt="" class="imgOTOIAWASE">
+            </div>
+        </div>
+    </main>
+    <footer>
+        <table>
+            <tr>
+                <th><a href="./siaisokuhou.html">試合情報</a></th>
+                <th><a href="./teaminfo.html">チーム情報</a></th>
+                <th>ニュース</th>
+            </tr>
+            <tr>
+                <td>試合日程・結果</td>
+                <td>チーム名鑑</td>
+                <td><a href="./goods.html">グッズ</a></td>
+            </tr>
+            <tr>
+                <td>選手成績</td>
+                <td></td>
+                <td><a href="./gurumetop.html">グルメ</a></td>
+            </tr>
+            <tr>
+                <td>スケジュール</td>
+                <td></td>
+                <td><a href="./アクセスマップ.html">CKGドーム・西畑</a></td>
+            </tr>
+        </table>
+
+    </footer>
+
+
+
+</body>
+
+</html>

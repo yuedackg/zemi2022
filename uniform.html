@@ -1,0 +1,95 @@
+<!-- 
+    【製作者情報】
+    学籍番号：200xx
+    氏名： 瓜生　
+    ページ名：okiuniform.html
+
+-->
+<!-- 
+    残作業
+    ・HTMLの作成
+    　内容を記述する・絵を挿入する
+    ・CSSでデザイン（配色と、サイズ）
+    ・もろもろ
+
+
+    
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="sample.css">
+    <style>
+        div,
+        img,
+        p {
+            /* border: solid 1px gray; */
+        }
+
+        /* img { */
+ 
+            /* width: 100px;
+            height: 100px; ]*/ 
+    .taitoru{
+        font-size: 20pt;
+        text-align: center;
+        color: azure;
+        background-color: aquamarine;
+    }
+    .taitoru2{
+        font-size: 15pt;
+        text-align: center;
+        color: black;
+        background-color: aliceblue;
+    }
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .container img{
+        justify-content: space-around;
+        margin: 0 auto;
+    }
+    .container p{
+        margin: 0 auto;
+    }
+    img{
+        width: 500px;
+    }
+    main{
+        width: 550px;
+    }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="taitoru"> ユニフォーム紹介</div>
+        <div class="container">
+            <img src="./image/uniform-image/syuugou.png" alt="">
+            <p class="taitoru2">ホームユニフォーム 一塁側ベンチの時使用</p>
+        </div>
+        <div class="container">
+            
+            <!-- 
+                【済】１．　絵を探す
+                【済】２．　[Win]+[Shift]+[s] で絵を切り取る
+                【済】３．　絵を保存する　11．ゼミ成果物の下の「uniform-image」フォルダに保存する
+                【済】４．　srcの指定をする「./」から書き始める
+                ５．　altの後ろの写真の説明を入れる
+             -->
+            <img src="./image/uniform-image/tyuu.jpg" alt="">
+            <p class="taitoru2">ビジターユニフォーム　三塁側ベンチの時使用 </p>
+        </div>
+
+    </main>
+</body>
+
+</html>

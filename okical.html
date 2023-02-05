@@ -1,0 +1,145 @@
+<!-- 
+    【製作者情報】
+    学籍番号：
+    氏名：　　徳永
+ -->
+<!-- 
+    残作業
+    ・見出しの追加
+    　前の月、次の月の追加、タイトルの追加
+    ・表の作成
+    ・表のCSSの作成
+    ・表の色設定
+
+  -->
+<!-- 
+    今後のスケジュール
+    ・1/16　
+    ・1/20　全体の完成
+    ・1/23　画面のハードコピーを画面設計書に反映させる
+    ・1/23~　ゼミ発表
+    ・1/24　卒業判定会議資料の提出
+    ・1/26　卒業判定会議（17:00~）
+ -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header,
+        nav,
+        main,
+        div {
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        td,
+        th {
+            margin: 0;
+            border: solid 1px gray;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <nav>
+
+    </nav>
+    <main>
+        <!-- 月間スケジュールを前の月、次の月に移動するリンクと、ページタイトルを記載する　 -->
+        <div class="container">
+            <div>前へ</div>
+            <div>3月</div>
+            <div>次へ</div>
+        </div>
+        <!-- ここから下はカレンダーの内容を記述する　01.13追記 -->
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>sun</th>
+                        <th>mon</th>
+                        <th>thu</th>
+                        <th>wed</th>
+                        <th>the</th>
+                        <th>fri</th>
+                        <th>sat</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>1</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>7</td>
+                        <td>8</td>
+                        <td>9</td>
+
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>11</td>
+                        <td>12</td>
+                        <td>13</td>
+                        <td>14</td>
+                        <td>15</td>
+                        <td>16</td>
+
+                    </tr>                    <tr>
+                        <td>17</td>
+                        <td>18</td>
+                        <td>19</td>
+                        <td>20</td>
+                        <td>21</td>
+                        <td>22</td>
+                        <td>23</td>
+
+                    </tr>                    <tr>
+                        <td>24</td>
+                        <td>25</td>
+                        <td>26</td>
+                        <td>27</td>
+                        <td>28</td>
+                        <td>29</td>
+                        <td>30</td>
+
+                    </tr>
+
+                    
+
+                </tbody>
+            </table>
+        </div>
+    </main>
+</body>
+
+</html>

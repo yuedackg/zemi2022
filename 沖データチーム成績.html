@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="teamresult.css">
+    <style>
+        .tabs {
+            background-color: white;
+            margin-top: 50px;
+            padding-bottom: 40px;
+            box-shadow: 0 0 10px rgda(0.0.0.0.2);
+            width: 700px;
+            margin: 0 auto;
+        }
+
+        .tab_item {
+            width: calc(100% / 2);
+            height: 50px;
+            border-bottom: 3px solid skyblue;
+            background-color: lightgray;
+            line-height: 50px;
+            font-size: 20px;
+            color: black;
+            text-align: center;
+            display: block;
+            float: left;
+            font-weight: bold;
+            transition: all 0.2 ease;
+
+        }
+
+        .title {
+            color: black;
+            background-color: aqua;
+            padding: 5px;
+            margin: top 10px;
+            ;
+        }
+
+        .tab_item:hover {
+            opacity: 0.75;
+
+        }
+
+        input[name="tab_item"] {
+            display: none;
+
+        }
+
+        .tab_content {
+            display: none;
+            padding: 40px 40px 0;
+            clear: both;
+            overflow: hidden;
+        }
+
+        #toushu-seiseki:checked~#toushu,
+        #dasha-seiseki:checked~#dasha {
+            display: block;
+        }
+
+        table th,
+        table td {
+            font-size: 20px;
+        }
+
+        .haikei-kuro {
+            width: 800px;
+            margin: 0 auto;
+            margin-bottom: 30px;
+        }
+
+        .tab_content {
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="haikei-kuro">沖データチーム全体</div>
+        <div class="tabs">
+            <input type="radio" id="toushu-seiseki" name="tab_item" checked>
+            <label class="tab_item" for="toushu-seiseki">投手成績</label>
+            <input type="radio" id="dasha-seiseki" name="tab_item">
+            <label class="tab_item" for="dasha-seiseki">打者成績</label>
+
+            <div class="tab_content" id="toushu">
+
+                <div class="title">投手成績</div>
+                <div class="pl_tablefix01 jp-tablescroll">
+                    <table class="pl_table02">
+                        <colgroup>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+
+
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <!-- <th class="sukoa"></th> -->
+                                <!-- <th class="jp-threshold pl_hidecell">&nbsp;</th>>-->
+                                <th>試<br>合<br>数</th>
+                                <th>防<br>御<br>率</th>
+                                <th>勝<br>数</th>
+                                <th>負<br>数</th>
+                                <th>勝<br>率</th>
+                                <th>奪<br>三<br>振</th>
+                                <th>与<br>四<br>球</th>
+                                <th>与<br>死<br>球</th>
+                                <th>被<br>安<br>打</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="suuzi">
+                                <!-- <td class="pl_hidecell">&nbsp;</td>-->
+                                <td>54</td>
+                                <td>11.43</td>
+                                <td>14</td>
+                                <td>40</td>
+                                <td>2,56</td>
+                                <td>78</td>
+                                <td>186</td>
+                                <td>13</td>
+                                <td>242</td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+
+            <div class="tab_content" id="dasha">
+                <div class="title">打者成績</div>
+                <div class="pl_tablefix01 jp-tablescroll">
+                    <table class="pl_table02">
+                        <colgroup>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <!-- <th class="sukoa"></th> -->
+                                <!-- <th class="jp-threshold pl_hidecell">&nbsp;</th>>-->
+                                <th>打<br>率</th>
+
+                                <th>試<br>合<br>数</th>
+                                <th>打<br>席</th>
+                                <th>打<br>数</th>
+                                <th>安<br>打</th>
+                                <th>二<br>塁<br>打</th>
+                                <th>三<br>塁<br>打</th>
+                                <th>本<br>塁<br>打</th>
+                                <th>打<br>点</th>
+                                <th>三<br>振</th>
+                                <th>四<br>死<br>球</th>
+                                <th>盗<br>塁</th>
+                                <th>出<br>席<br>率</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="suuzi">
+                                <!-- <td class="pl_hidecell">&nbsp;</td>-->
+                                <td>2.01</td>
+                                <td>54</td>
+                                <td>1944</td>
+                                <td>1782</td>
+                                <td>358</td>
+                                <td>38</td>
+                                <td>17</td>
+                                <td>12</td>
+                                <td>187</td>
+                                <td>487</td>
+                                <td>162</td>
+                                <td>96</td>
+                                <td>2.67</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
+        </div>
+
+    </main>
+
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<style>
+        :root{
+        --my-logo-hight:    calc( 90px );
+    
+    }
+    header, header div{
+        box-sizing: border-box;
+    }
+    body {
+        margin: auto;
+    }
+    header {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    header .headerlogo {
+        width: var(--my-logo-hight);
+        height: var( --my-logo-hight);
+    }
+    header .headerschool {
+        width: calc( 400 / 92 * var(--my-logo-hight));
+    }
+    header .headeraddress {
+        width: calc( 800px - 10% - 40% );
+    }
+    .imgs {
+        width: var(--my-logo-hight);
+        height: var(--my-logo-hight)
+    }
+    .imgschool {
+        width: calc(400 / 92 * var(--my-logo-hight) ) ;
+        height: var(--my-logo-hight);
+    }
+    .imgaddress {
+        /* width: 320px; */
+        width: calc( 320 / 92 * var( --my-logo-hight));
+        height: var(--my-logo-hight)
+    }
+    header div {
+        width: calc(800px / 3);
+        display: flex;
+        flex-direction: row;
+        margin-top: 10px;
+    }
+    .headerlogo {
+        width: 80px;
+    }
+    .headerschool {
+        width: 400px;
+    }
+    .headeraddress {
+        width: 200px;
+    }
+</style>
+
+<body>
+    <header>
+        <div class="headerlogo"><img src="./img/CKGrogo.png" alt="" class="imgs"></div>
+        <div class="headerschool"><img src="./img/schoolmei.png" alt="" class="imgschool" width="500px"></div>
+        <div class="headeraddress"><img src="./img/zyusyo.png" alt="" class="imgaddress" width="300px"></div>
+    </header>
+</body>

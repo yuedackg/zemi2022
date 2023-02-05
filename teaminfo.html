@@ -1,0 +1,186 @@
+<!-- 
+    【製作者情報】
+    制作ページ：　チーム情報
+    学籍番号：200**
+    氏名：　　武田　凛
+ -->
+<!-- 
+    残作業
+    ・スタイルファイルを作成する
+    　<style>～</style>を別のファイル（teaminfo.html）として作成すること
+    ・<header>の内容は「<iframe src="./header.html" frameborder="no" width="1000px" height="130px" id="myHeader" scrolling="no"></iframe>」に変更する
+    ・navタグのデザインは、siaisokuhou.htmlを参照して、デザインを行うこと
+    
+ -->
+<!-- 
+    今後のスケジュール
+    ・1/16　
+    ・1/20　全体の完成
+    ・1/23　画面のハードコピーを画面設計書に反映させる
+    ・1/23~　ゼミ発表
+    ・1/24　卒業判定会議資料の提出
+    ・1/26　卒業判定会議（17:00~）
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        :root {
+            --my-logo-hight: calc(90px);
+
+        }
+
+        header,
+        header div {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: auto;
+        }
+
+        header {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        header .headerlogo {
+            width: var(--my-logo-hight);
+            height: var(--my-logo-hight);
+        }
+
+        header .headerschool {
+            width: calc(400 / 92 * var(--my-logo-hight));
+        }
+
+        header .headeraddress {
+            width: calc(800px - 10% - 40%);
+        }
+
+        .imgs {
+            width: var(--my-logo-hight);
+            height: var(--my-logo-hight)
+        }
+
+        .imgschool {
+            width: calc(400 / 92 * var(--my-logo-hight));
+            height: var(--my-logo-hight);
+        }
+
+        .imgaddress {
+            /* width: 320px; */
+            width: calc(320 / 92 * var(--my-logo-hight));
+            height: var(--my-logo-hight)
+        }
+
+        header div {
+            width: calc(800px / 3);
+            display: flex;
+            flex-direction: row;
+            margin-top: 20px;
+        }
+
+        .headerlogo {
+            width: 80px;
+        }
+
+        .headerschool {
+            width: 400px;
+        }
+
+        .headeraddress {
+            width: 200px;
+        }
+
+        :root {
+            --nav-width: 15%;
+        }
+
+        /* for debug */
+        body,
+        header,
+        nav,
+        main,
+        footer {
+            border: solid 1px gray;
+        }
+
+        /* for complete */
+        body,
+        header,
+        nav,
+        main,
+        footer {
+            box-sizing: border-box;
+
+        }
+
+        body {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        header {
+            width: 100%;
+        }
+
+        nav {
+            width: var(--nav-width);
+        }
+
+        main {
+            width: calc(100% - var(--nav-width));
+            height: 100vh;
+        }
+
+        iframe {
+            width: 1000px;
+            height: 100%;
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="./index.html"><iframe src="./header.html" frameborder="no" width="1000px" height="130px" id="myHeader" scrolling="no"></iframe></a>
+    </header>
+    
+    <nav>
+        <div>
+            <div>チーム情報トップ</div>
+            <!-- <div>選手名鑑</div> -->
+            <!-- <div>出場選手一覧</div> -->
+            <div><a href="./ouenkakouka.html" target="content"> 校歌・応援歌</a></div>
+            <div><a href="./rinen.html" target="content">球団理念</a></div>
+            <!-- here  -->
+            <!--
+                 他のページの取り込み方
+                 <a>タグを使用する
+                    hrefで、埋め込むファイル名を書く
+                    targetは表示するエリア
+            -->
+            <!-- <div><a href="./rinen (2).html" target="content">球団理念</a></div> -->
+            <!-- here -->
+            <div><a href="ayumi.html" target="content"></a> CKGの歩み</div>
+            <div><a href="./uniform.html">ユニホームの歴史</a> </div>
+            <div><a href="./newentry.html" target="content">新入生情報</a></div>
+
+        </div>
+    </nav>
+    <main>
+        <iframe src="./teaminfo-main.html" frameborder="0" name="content">
+
+
+        </iframe>
+    </main>
+
+</body>
+
+</html>
