@@ -1,0 +1,64 @@
+div{
+    /* border: solid 1px red; */
+}
+body{
+    background-color: aquamarine;
+}
+main{
+    width: 800px;
+    background-color: lightgoldenrodyellow;
+    margin: 0 auto;
+}
+main div {
+    /* width: 80%; */
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.map {
+    width: 45%;
+}
+
+.address {
+    width: 45%;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+}
+.title{
+    text-align: center;
+    font-size: 30pt;
+    font-weight: bold;
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.cyuo{
+    justify-content: center;
+}
+.menu{
+    background-color: black;
+    color: white;
+    width: 100%;
+}
+.menu1 div{
+    width: 45%;
+
+}
+footer{
+    width: 800px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: right;
+    /* border: solid 1px gray; */
+    margin: 0 auto;
+    
+}
+footer div{
+    font-weight: bold;
+    margin-top: 5px;
+
+}
