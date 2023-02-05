@@ -1,0 +1,357 @@
+<!-- 
+    【製作者情報】
+    ファイル名：09．html
+    制作ページ：　アカデミースケジュール
+    学籍番号：20016
+    氏名：　山下　
+ -->
+<!-- 
+    残作業
+    ・画面の幅揃える　
+    ・背景色を設定
+    ・表の体裁を整える
+    　幅、色、・・・
+    ・他のファイルの内容を作成
+    　06.html、08.html、10.html
+    ・ページ間のリンクをつなぐ
+    ・試合速報ペー時から呼び出されるようにリンクを調整
+    
+  -->
+<!-- 
+    今後のスケジュール
+    ・1/16~ HTML・CSSの作成　
+    ・1/20　全体の完成
+    ・1/23　画面のハードコピーを画面設計書に反映させる
+    ・1/23~　ゼミ発表
+    ・1/24　卒業判定会議資料の提出
+    ・1/26　卒業判定会議（17:00~）
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            --my-arrow-width: 150px;
+            --my-arrow-hight: 50px;
+            --my-arrow-bg-color: black;
+            --my-arrow-color: white;
+            --my-arrow-font-size: 20pt;
+            --my-table-cell-hiduke-hight: 30pt;
+            --my-table-cell-aite-hight: 30pt;
+        }
+
+        div {
+            border: solid 1px gray;
+        }
+
+        div,
+        main {
+            box-sizing: border-box;
+
+        }
+
+        .yoko {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .yoko div:nth-child(1) {
+            font-size: 10px;
+        }
+
+        .yoko div:nth-child(2) {
+            font-size: 30px;
+        }
+
+        .yoko div:nth-child(3) {
+            font-size: 10px;
+        }
+
+        .left-arrow,
+        .right-arrow {
+            width: var(--my-arrow-width);
+            height: var(--my-arrow-hight);
+            background-color: var(--my-arrow-bg-color);
+            color: var(--my-arrow-color);
+            font-size: 25pt;
+            /* text-align: center; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .left-arrow {
+            clip-path: polygon(0% 50%, 10% 0%, 100% 0%, 100% 100%, 10% 100%);
+
+        }
+
+        .right-arrow {
+            clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%);
+
+        }
+
+        .yoko a {
+            color: var(--my-arrow-color);
+            font-size: var(--my-arrow-font-size);
+            display: inline-block;
+        }
+
+        table {
+            margin: auto;
+            border-collapse: collapse;
+
+        }
+
+        table th {
+            width: calc(100% / 7);
+
+        }
+
+        table td,
+        table th {
+            margin: 0;
+            border: solid 1px black;
+        }
+
+        .hiduke {
+            height: var(--my-table-cell-hiduke-hight);
+
+        }
+
+        .aite {
+            display: inline-block;
+            /* width: 200px; */
+            width: calc( 95% );
+            margin: 0 auto;
+            height: var(--my-table-cell-aite-hight);
+        }
+
+        section {
+            /* width: 800px; */
+            margin: 0 auto;
+            background-color: skyblue;
+        }
+    </style>
+
+</head>
+
+<body>
+    <section>
+
+        <div class="yoko">
+            <div class="left-arrow">
+                <a href="./08.html">前の月</a>
+            </div>
+            <div>
+                ９月
+            </div>
+            <div class="right-arrow">
+                <a href="10.html">次の月</a>
+            </div>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>月</th>
+                    <th>火</th>
+                    <th>水</th>
+                    <th>木</th>
+                    <th>金</th>
+                    <th>土</th>
+                    <th>日</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>
+                        <div class="hiduke">1</div>
+                        <div class="aite">　</div>
+                    </th>
+                    <th>
+                        <div class="hiduke">2</div>
+                        <div class="aite">　</div>
+
+                    </th>
+                    <th>
+                        <div class="hiduke">3</div>
+                        <div class="aite">　</div>
+
+                    </th>
+                    <th>
+                        <div class="hiduke">4</div>
+                        <div class="aite">　</div>
+
+                    </th>
+                    <th>
+                        <div class="hiduke">5</div>
+                        <div class="aite">　</div>
+
+                    </th>
+                    <th>
+                        <div class="hiduke">6</div>
+                        <div class="aite">　</div>
+
+                    </th>
+                    <th>
+                        <div class="hiduke">7</div>
+                        <div class="aite">　</div>
+
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <div class="hiduke">8</div>
+                        <div class="aite">　</div>
+                    </th>
+                    <th>
+                        <div class="hiduke">9</div>
+                        <div class="aite">　</div>
+
+                    </th>
+                    <th>
+                        <div class="hiduke">10</div>
+                        <div class="aite">　</div>
+
+                    </th>
+                    <th>
+                        <div class="hiduke">11</div>
+                        <div class="aite">　</div>
+
+                    </th>
+                    <th>
+                        <div class="hiduke">12</div>
+                        <div class="aite">　</div>
+
+                    </th>
+                    <th>
+                        <div class="hiduke">13</div>
+                        <div class="aite">　</div>
+
+                    </th>
+                    <th>
+                        <div class="hiduke">14</div>
+                        <div class="aite">　</div>
+
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <div class="hiduke">15</div>
+                        <div class="aite">　</div>
+                    </th>
+                    <th>
+                        <div class="hiduke">16</div>
+                        <div class="aite">　</div>
+
+                    </th>
+                    <th>
+                        <div class="hiduke">17</div>
+                        <div class="aite">　</div>
+
+                    </th>
+                    <th>
+                        <div class="hiduke">18</div>
+                        <div class="aite">　</div>
+
+                    </th>
+                    <th>
+                        <div class="hiduke">19</div>
+                        <div class="aite">　</div>
+
+                    </th>
+                    <th>
+                        <div class="hiduke">20</div>
+                        <div class="aite">　</div>
+
+                    </th>
+                    <th>
+                        <div class="hiduke">21</div>
+                        <div class="aite">　</div>
+
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <div class="hiduke">22</div>
+                        <div class="aite">　</div>
+                    </th>
+                    <th>
+                        <div class="hiduke">23</div>
+                        <div class="aite"><a href="../../siai/2022-9-23.html">fukuoka oceans</a></div>
+
+                    </th>
+                    <th>
+                        <div class="hiduke">24</div>
+                        <div class="aite"><a href="../../siai/2022-9-24.html">kama city burning heros</a></div>
+
+                    </th>
+                    <th>
+                        <div class="hiduke">25</div>
+                        <div class="aite">　</div>
+
+                    </th>
+                    <th>
+                        <div class="hiduke">26</div>
+                        <div class="aite">　</div>
+
+                    </th>
+                    <th>
+                        <div class="hiduke">27</div>
+                        <div class="aite">　</div>
+
+                    </th>
+                    <th>
+                        <div class="hiduke">28</div>
+                        <div class="aite">　</div>
+
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <div class="hiduke">28</div>
+                        <div class="aite">　</div>
+                    </th>
+                    <th>
+                        <div class="hiduke">29</div>
+                        <div class="aite">　</div>
+
+                    </th>
+                    <th>
+                        <div class="hiduke">30</div>
+                        <div class="aite">　</div>
+
+                    </th>
+                    <th>
+                        <div class="hiduke">31</div>
+                        <div class="aite">　</div>
+
+                    </th>
+                    <th>
+                        <div class="hiduke"></div>
+                        <div class="aite">　</div>
+
+                    </th>
+                    <th>
+                        <div class="hiduke"></div>
+                        <div class="aite">　</div>
+
+                    </th>
+                    <th>
+                        <div class="hiduke"></div>
+                        <div class="aite">　</div>
+
+                    </th>
+                </tr>
+
+            </tbody>
+        </table>
+    </section>
+</body>
+
+</html>
