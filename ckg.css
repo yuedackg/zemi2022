@@ -17,6 +17,7 @@ nav div{
     border: 1px solid blue;
 }
 nav{
+    color: rgb(8, 8, 120);
     font-weight: bold;
     font-size: 15px;
     display: flex;
@@ -83,10 +84,11 @@ a{
 .saito{
     width: 16%;
     padding: 0.5em 1em;
+    font-weight: bold;
     margin: 2em 0;
-    color: #FFF;
+    color: black;
     background: #6eb7ff;
-    border-bottom: solid 6px #3f87ce;
+    border-bottom: solid 6px blue;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
     border-radius: 9px;
 }
@@ -97,9 +99,9 @@ a{
 }
 .flex p{
     width: 64%;
-    font-size: 19px;
+    font-size: 20px;
     text-align: left;
-    margin-left: 80px;
+    margin-left: 70px;
     font-weight: bold;
     background-color: #6eb7ff;
 }
@@ -136,6 +138,7 @@ a{
     height: 220px;
 }
 th,td{
+    font-weight: bold;
     border: solid 2px blue;
     margin: 0;
     background-color: skyblue;
@@ -144,5 +147,6 @@ th,td{
 table{
     background-color: yellow;
     width: 800px;
+    margin-top: 20px;
     margin-bottom: 50px;
 }

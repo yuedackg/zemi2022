@@ -1,15 +1,3 @@
-<div>
-    <div>絵の上に文字を重ね合わせる方法です</div>
-    <img src="./dummy-image/string on picture.png" alt=""><br>
-    <div>重ね合わせのボックスに名前を付ける必要があります。<br>
-    </div>
-    <img src="./dummy-image/string-on-picture-css.png" alt=""><br>
-    <div>
-        親要素に「postion 」
-    </div>
-</div>
-
-
 <!--
     【製作者情報】
     学籍番号： 20019
@@ -72,7 +60,7 @@
 
         /* 画面デザインについて */
         body {
-            width: 1500px;
+            width: 1300px;
             margin: auto;
         }
 
@@ -93,6 +81,23 @@
 
         .gakkou {
             text-align: center;
+        }
+
+        .tenpo {
+            position: relative;
+        }
+
+        .text {
+            position: absolute;
+
+            bottom: 0;
+            right: 0;
+            left: 0;
+            color: white;
+            text-align: center;
+            /* border: solid 1px red; */
+
+            background-color: var(--my-logo-string-bg-color);
         }
 
         /* 残りの下のほうについてのデザイン */
@@ -118,42 +123,53 @@
 
             <div class="container">
                 <!-- 一つ目 -->
-                <div>
-                    <div><img src="" alt="tenpo shasin"></div>
-                    <div>tenpo mei</div>
+                <div class="tenpo">
+                    <a href="./area/area3.html" target="_blank">
+                        <div><img src="./image-gurume/3.jpg" alt="tenpo shasin" class="gazou"></div>
+                        <div class="text">
+                            <h1>海豚や</h1>
+                        </div>    
+                    </a>
                 </div>
-
                 <!-- 二つ目 -->
+                <div class="tenpo">
+                    <a href="./area/area1.html" target="_blank">
+                    <div><img src="./image-gurume/tubohathi.gaikan.jpg" alt="tenpo shasin" class="gazou"></div>
+                    <div class="text">
+                        <h1>壺八</h1>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <!-- 三つ目 -->
+                    <div class="tenpo">
+                        <a href="./area/area2.html" target="_blank">
+                        <div><img src="./image-gurume/houraikaku.gaiken.webp" alt="tenpo shasin" class="gazou"></div>
+                        <div class="text">
+                            <h1>蓬莱閣</h1>
+                        </div>
+                    </div>
+
+                    <!-- 四つ目 -->
+                    <div class="tenpo">
+                        <a href="./area/area4.html" target="_blank">
+                        <div><img src="./image-gurume/rairaitei.gaiken.jpg" alt="tenpo shasin" class="gazou"></div>
+                        <div class="text">
+                            <h1>来来亭</h1>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="moji">デリバリー紹介</div>
                 <div>
                     <div><img src="" alt="tenpo shasin"></div>
                     <div>tenpo mei</div>
                 </div>
+
+
+
+
             </div>
-
-            <div class="container">
-                <!-- 三つ目 -->
-                <div>
-                    <div><img src="" alt="tenpo shasin"></div>
-                    <div>tenpo mei</div>
-                </div>
-
-                <!-- 四つ目 -->
-                <div>
-                    <div><img src="" alt="tenpo shasin"></div>
-                    <div>tenpo mei</div>
-                </div>
-            </div>
-
-            <div class="moji">デリバリー紹介</div>
-            <div>
-                <div><img src="" alt="tenpo shasin"></div>
-                <div>tenpo mei</div>
-            </div>
-
-
-
-
-        </div>
     </main>
 
 

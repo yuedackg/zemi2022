@@ -1,0 +1,104 @@
+<!-- 
+    【製作者情報】
+    学籍番号：
+    氏名：　　角田
+ -->
+<!-- 
+    残作業 
+    ・全体の配置の見直し
+    　
+    ・メニュを表で作成しなおす。
+    ・背景色の設定
+    ・文字位置の設定（中央ぞろえなど）
+
+-->
+<!-- 
+    今後のスケジュール
+    ・1/16　欠席
+    ・1/17  画像の挿入・CSSの追加
+    ・1/18  全体の整理
+    ・1/20　全体の完成
+    ・1/23　画面のハードコピーを画面設計書に反映させる
+    ・1/23~　ゼミ発表
+    ・1/24　卒業判定会議資料の提出
+    ・1/26　卒業判定会議（17:00~）
+ -->
+<!-- <div style="border: double 2px gold;background-color: gold;margin-bottom: 20px;">
+    次の画面を参考にしてレイアウトする<br>
+    <img src="./comment/deribari-01.png" alt=""><br>
+    元の画面レイアウトは次状態になっていること<br>
+    <img src="./comment/deribari-02.png" alt=""><br>
+    
+</div> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="sample.css">
+    <style>
+        /* この「container」を使ってclass名をつければ横並びになる */
+        .container {
+            /* 自由配置 */
+            display: flex;
+            /* 画面の右端で折り返し   */
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 角田 -->
+    <main>
+        <!-- 横並びにしたいところで、containerをclass名に指定する -->
+        <div class="container">
+            <div>
+                店舗名
+            </div>
+            <div>
+                ドミノピザ大橋駅南口
+            </div>
+        </div>
+
+        <div>
+            <!-- ここに絵が入る -->
+            <div>
+                <!-- 絵を入れるタグ -->
+                <!-- srcは画像の場所；altは画像説明 -->
+                <!-- 
+                    １．絵を探す
+                    ２．絵を保存する
+                    ３．imgを打つ
+                    ４．srcの指定に、「./」を打つ
+                    ５．ファイルを選ぶ
+                    ６．alt説明を書く
+                 -->
+                <img src="" alt="">
+            </div>
+            <div>
+                住所
+                〒815-0003
+                営業時間11:00~24:00
+                福岡市南区大橋
+                092-557-8820
+            </div>
+        </div>
+
+        <div>
+            メニュー
+            商品１マルゲリータ
+            商品２クワトロ　ニューヨーカー
+            商品３ビックチーズ
+            商品４ビックペパロニ＆dソーセージ
+        </div>
+
+
+    </main>
+</body>
+
+</html>

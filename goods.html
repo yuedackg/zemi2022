@@ -1,107 +1,159 @@
-<div>
-<img src="./dummy-image/goods.png" alt="">
-<img src="./dummy-image/goods-v2.png" alt="">
-</div>
 <!-- 
     【製作者情報】
     制作ページ：　グッズ
     学籍番号：20031
     氏名：　　宮崎　大地
  -->
- <!--
-    残作業
-    ・商品案内の画像を挿入する
-    ・全体の配色を整える
-    　画面の幅1000px
-    　背景色の色を付ける
-    　デバッグ用の罫線を取り除く
-    　不要な項目を整理する
-    　文字の位置を調整する
-  -->
-  <!-- 
-    今後のスケジュール
-    ・1/16　欠席
-    ・1/17  画像の挿入・CSSの追加
-    ・1/18  全体の整理
-    ・1/20　全体の完成
-    ・1/23　画面のハードコピーを画面設計書に反映させる
-    ・1/23~　ゼミ発表
-    ・1/24　卒業判定会議資料の提出
-    ・1/26　卒業判定会議（17:00~）
- -->
- <!DOCTYPE html>
- <html lang="en">
- <head>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>goods</title>
-    <style>
-        div {
-            border: solid 1px gray;
-        }
+    <link rel="stylesheet" href="./ckgbase.css">
+    <iframe src="./header.html" frameborder="no" width="1000px" height="130px" id="myHeader"
+    scrolling="no"></iframe>
+    <div>
+        <ul class="menu-sub">
+            <li><a href="./siaisokuhou.html">試合情報トップ</a></li>
+        </ul>
+    </div>
+
+
+    <div>
+        <!-- 樋口製作 -->
+        <!-- <a href="./teaminfo.html">チーム情報</a> -->
+        チーム情報
     
-        div {
+        <ul class="menu-sub">
+            <li><a href="./teaminfo.html">チーム情報トップ</a></li>
+        </ul>
+    </div>
+    <div>
+        <a href="./goods.html">グッズ</a>
+    </div>
+    <div>
+        <a href="./gurumetop.html">グルメ</a>
+    </div>
+    
+    <div>
+        <a href="./アクセスマップ.html">CKGドーム・西畑</a>
+    </div>
+    </nav>
+    
+    <style>
+        :root {
+            --my-photo-ratio: 60%;
+            --my-photo-bg-color: beige;
+            --my-goods-titlel-rate: 40%;
+            --my-googs-margin: 10%;
+            --my-page-bg-color: aquamarine;
+            --my-page-width: 800px;
+        }
+        img {
+            width: 30%;
+        }
+        div,
+        img {
             box-sizing: border-box;
+            /* border: solid 1px gray; */
+            /* padding: 5px; */
         }
-        .goods{
-            width: 100%;
-            font-size: 15pt;
-            padding-left: 20%;
+        .photo{
+            width: var(--my-photo-ratio);
+            text-align: center;
+            background-color: var(--my-photo-bg-color);
+
         }
-        .syasin{
-            width: 40%;
+        .photo img{
+            /* transform: rotate(-90deg); */
+            width: 70%;
+            margin: 20px;
         }
-        .ichiran{
-            width: calc(100% - 10% - 40%);
+        .text{
+            width: calc( 100% - var(--my-photo-ratio) );
+            padding-left: 10px;
+            font-size: 150%;
+        }
+        main{
+            width: var(--my-page-width);
+            margin: 0 auto;
         }
         .container{
             display: flex;
             flex-wrap: wrap;
         }
-        .goodssyasin{
-            width: 200px;
-            height: 200px;
-            margin: 100px;
+        .goods{
+            font-size: 60px;
+            background-color: rgb(134, 134, 243);
+            width: 100%;
+            padding-left: 20px;
+            margin-bottom: 10px;
+        }
+        footer{
+            width: var(--my-page-width);
+            margin: 0 auto;
+            border-top: solid 2px black;
+            text-align: center;
+            margin-top: 5px;
+        }
+        .ichiran{
+            margin-top: 5px;
+        }
+        .bousi img{
+            width: 40%;
         }
     </style>
-    
 </head>
- <body>
+
+<body>
     <main class="container">
-    <div class="goods">
-        グッズ情報
-    </div>
-    <div class="syasin">
-        <img src="" alt="グッズの写真" class="goodssyasin">
-    </div>
-    <div class="ichiran">
-        <div>
-            <div>
-                商品化
-            </div>
-            <div>
-                価格
-            </div>
+        <div class="goods">
+            <font color="#ffffff">グッズ情報</font>
         </div>
-        <div>
-            <div>
+        
+        <div class="ichiran container">
+                <div class="photo">
+                    <img src="./goods-syasin/goods-towen.png" alt="タオルの写真">
+                </div>
+                <div class="text">
+                    CKGタオル
+                    <br>
+                    価格 &yen;1,000.<br>
+                    公式試合受付にて販売
+                </div>           
+        </div>
+        <div class="ichiran container">
+            <div class="photo bousi">
+                <img src="./goods-syasin/goods-bousi.png" alt="帽子の写真">
+            </div>
+            <div class="text">
                 
+                <br>
+                公式戦帽子
+                <br>
+                非売品
+            </div>    
+            <div class="ichiran container">
+                <div class="photo bousi">
+                    <img src="goods-syasin/goods-herumeto.png" alt="ヘルメットの写真">
+                </div>
+                <div class="text">
+                    
+                    <br>
+                    試合用ヘルメット
+                    <br>
+                    非売品
+                </div>         
             </div>
-            <div>
-                価格
-            </div>
-        </div>
+    </main>
+    <footer>
         <div>
-            <div>
-                説明
-            </div>
-            <div>
-
-            </div>
+            Copyright(C)2023, M.Daichi, All right reserved.
         </div>
-    </div>
+    </footer>
+</body>
 
-</main>
- </body>
- </html>
+</html>

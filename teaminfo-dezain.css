@@ -1,0 +1,28 @@
+table{
+    margin: 0 auto;
+    width: 40%;
+    border-collapse:collapse;
+}
+td:nth-child(1){
+    text-align: center;
+
+}
+td:nth-child(2){
+    text-align: center;
+}
+td:nth-child(3){
+    text-align: center;
+}
+th{
+    padding: 5px;
+    color: black;
+    background-color: aqua;
+    width: 20%;
+    border: black solid 1px;
+}
+h1{
+    text-align: center;
+    background-color: aqua;
+    color: black;
+    padding: 5px;
+}    

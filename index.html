@@ -23,14 +23,78 @@
 </head>
 
 <body>
-    <iframe src="./header.html" frameborder="no" width="1000px" height="130px" id="myHeader" scrolling="no"></iframe></a>
+    <iframe src="./header.html" frameborder="no" width="1000px" height="130px" id="myHeader"
+        scrolling="no"></iframe>
     <nav>
         <div>
-            <a href="./siaisokuhou.html">試合情報</a>   
+            <!-- <a href="./siaisokuhou.html">試合情報</a> -->
+            試合情報
+            <style>
+                .menu-sub {
+                    position: absolute;
+                    margin-left: 0px;
+                    padding: 0;
+                    display: none;
+                    z-index: 100;
+                    background-color: white;
+                    list-style-type: none;
+                }
+
+                .menu-sub li {
+                    box-sizing: border-box;
+                    border: solid 1px grey;
+                    padding: 0;
+                    margin: 0;
+                }
+
+                .menu-sub.open {
+                    margin-top: -0px;
+                    display: block;
+                }
+
+                .menu-sub li a {
+                    color: blue;
+                    padding: 5px;
+                    margin-left: -5px;
+                    display: block;
+                    text-decoration: none;
+                }
+            </style>
+            <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+            <script>
+                // sub menu
+                // https://rinblog.org/jquery-drop-down-menu/
+                $(function () {
+                    $("nav div").hover(
+                        function () {
+                            $(this).children(".menu-sub").addClass("open");
+                        }, function () {
+                            $(this).children(".menu-sub").removeClass("open");
+                        }
+                    )
+                });
+            </script>
+            <ul class="menu-sub">
+                <li><a href="./siaisokuhou.html">試合情報トップ</a></li>
+                <li><a href="./siaisokuhou.html">試合速報</a></li>
+                <li><a href="./siaisokuhou-sensyuseiseki.html">選手成績</a></li>
+                <li><a href="./teamscore.html">チーム成績</a></li>
+                <li><a href="./players-1.html">選手情報</a></li>
+            </ul>
         </div>
         <div>
             <!-- 樋口製作 -->
-            <a href="./teaminfo.html">チーム情報</a>
+            <!-- <a href="./teaminfo.html">チーム情報</a> -->
+            チーム情報
+
+            <ul class="menu-sub">
+                <li><a href="./teaminfo.html">チーム情報トップ</a></li>
+                <li><a href="./ouenkakouka.html">校歌・応援歌</a></li>
+                <li><a href="./rinen.html">球団理念</a></li>
+                <li><a href="">CKGの歩み</a></li>
+                <li><a href="./ユニフォーム.html">ユニホームの歴史</a></li>
+                <li><a href="./newentry.html">新入生情報</a></li>
+            </ul>
         </div>
         <div>
             <a href="./goods.html">グッズ</a>
@@ -39,10 +103,19 @@
             <a href="./gurumetop.html">グルメ</a>
         </div>
         <div>
-            <a href="./akademigaiyasyuseiseki.html">CKGアカデミー</a>
+            CKGアカデミー
+            <ul class="menu-sub">
+                <li><a href="./ckgacademy.html">CKGアカデミー</a></li>
+                <li><a href="./akademigaiyasyuseiseki.html">CKGアカデミー選手成績</a></li>
+                <li><a href="">スケジュール</a></li>
+            </ul>
         </div>
+
         <div>
             <a href="./アクセスマップ.html">CKGドーム・西畑</a>
+            <ul class="menu-sub">
+                <li><a href="./siaisokuhou-dome.html">CKGドーム</a></li>
+            </ul>
         </div>
     </nav>
     <main>
@@ -70,7 +143,7 @@
         <div class="saito">サイトの更新情報</div>
         <div class="flex">
             <img src="./img/sennsyu.png" alt="" class="namae">
-            <p>２０２２年度 福岡県野球連盟 ベストナイン・クラブベストナインに本校 硬式野球部から１名選出されました！！　樋口　昇樹　(外野手)</p>
+            <p>２０２２年度 福岡県野球連盟ベストナイン・クラブベストナインに本校硬式野球部から１名選出されました!　樋口　昇樹　(外野手)</p>
         </div>
         <div class="annnai">
             <div class="box">

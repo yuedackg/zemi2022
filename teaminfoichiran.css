@@ -1,0 +1,62 @@
+div {
+    /* border: solid 1px gray; */
+}
+body{
+    background-image: url(./image/iruka.png);
+    background-color: rgba(255, 255, 255, 0.8);
+    background-blend-mode: lighten;
+}
+section {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.yoko100 {
+    width: 100%;
+    justify-content: space-around;
+    margin-bottom: 100px;
+    /* position: relative; */
+}
+
+img {
+    width: 200px;
+    height: 200px;
+}
+
+.sisyasin {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    /* position: relative; */
+}
+.position{
+    /* position: absolute; */
+    bottom: 0;
+    right: 0;
+    left: 0;
+    text-align: center;
+
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+.my-title{
+    text-align: center;
+    font-size: 25pt;
+    font-weight: bolder;
+    color:white;
+    background-color: blue;
+    border-right: solid 2px black;
+    border-bottom: solid 2px black;
+}
+.my-list{
+    text-align: center;
+    font-size: 25pt;
+    font-weight: bolder;
+    color:white;
+    background-color: skyblue;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
