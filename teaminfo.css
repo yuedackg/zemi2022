@@ -1,0 +1,117 @@
+@import url(./ckg_style_const.css);
+:root {
+    --my-logo-hight: calc(90px);
+
+}
+
+header,
+header div {
+    box-sizing: border-box;
+}
+
+body {
+    margin: auto;
+    width: 1000px;
+    /* var(--my-scren-width); */
+    height: 100vh;
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+header .headerlogo {
+    width: var(--my-logo-hight);
+    height: var(--my-logo-hight);
+}
+
+header .headerschool {
+    width: calc(400 / 92 * var(--my-logo-hight));
+}
+
+header .headeraddress {
+    width: calc(800px - 10% - 40%);
+}
+
+.imgs {
+    width: var(--my-logo-hight);
+    height: var(--my-logo-hight)
+}
+
+.imgschool {
+    width: calc(400 / 92 * var(--my-logo-hight));
+    height: var(--my-logo-hight);
+}
+
+.imgaddress {
+    /* width: 320px; */
+    width: calc(320 / 92 * var(--my-logo-hight));
+    height: var(--my-logo-hight)
+}
+
+header div {
+    width: calc(800px / 3);
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+.headerlogo {
+    width: 80px;
+}
+
+.headerschool {
+    width: 400px;
+}
+
+.headeraddress {
+    width: 200px;
+}
+
+:root {
+    --nav-width: 15%;
+}
+
+/* for debug */
+body,
+header,
+nav,
+main,
+footer {
+    border: solid 1px gray;
+}
+
+/* for complete */
+body,
+header,
+nav,
+main,
+footer {
+    box-sizing: border-box;
+
+}
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+header {
+    width: 100%;
+}
+
+nav {
+    width: var(--nav-width);
+}
+
+main {
+    width: calc(100% - var(--nav-width));
+    height: 100vh;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+
+}

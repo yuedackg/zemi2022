@@ -1,0 +1,186 @@
+<!-- 
+    【製作者情報】
+    学籍番号：
+    氏名：　　徳永
+ -->
+<!-- 
+    残作業
+    ・見出しの追加　⇒　済
+    　前の月、次の月の追加、タイトルの追加　
+    ・表の作成
+    ・表のCSSの作成
+    ・表の色設定
+
+  -->
+<!-- 
+    今後のスケジュール
+    ・1/16　
+    ・1/20　全体の完成
+    ・1/23　画面のハードコピーを画面設計書に反映させる
+    ・1/23~　ゼミ発表
+    ・1/24　卒業判定会議資料の提出
+    ・1/26　卒業判定会議（17:00~）
+ -->
+
+<img src="./dummy-image/スクリーンショット 2023-01-16 143403.png" alt=""> <br>
+<img src="./dummy-image/calendar.png"">
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header,
+        nav,
+        main,
+        div {
+            box-sizing: border-box;
+        }
+        div{
+            border: solid 1px gray;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        td,
+        th {
+            margin: 0;
+            border: solid 1px gray;
+        }
+        .btn-prev{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 70px;
+            height: 50px;
+            clip-path: polygon(0% 50%, 25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
+            background-color: black;
+            color: white;
+            font-weight: bold;
+            background-color: black;
+        }
+        .btn-next{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 70px;
+            height: 50px;
+            clip-path: polygon(  0% 0%, 75% 0%, 100% 50%, 100% 50% , 75% 100%, 0% 100%);
+            background-color: black;
+            color: white;
+            font-weight: bold;
+
+        }   
+        thead th {
+            width: 80px;
+
+        }
+        tbody td{
+            text-align: center;
+            height: 90px;
+
+        }
+        main > div> table{
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <nav>
+
+    </nav>
+    <main>
+        <!-- 月間スケジュールを前の月、次の月に移動するリンクと、ページタイトルを記載する　 -->
+        <div class="container">
+            <div class="btn-prev"><div>前へ</div> </div>
+            <div>4月</div>
+            <div class="btn-next"><div>次へ</div></div>
+        </div>
+        <!-- ここから下はカレンダーの内容を記述する　01.13追記 -->
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>sun</th>
+                        <th>mon</th>
+                        <th>thu</th>
+                        <th>wed</th>
+                        <th>the</th>
+                        <th>fri</th>
+                        <th>sat</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>1 <br><a href="">VS ckg balling team</a> 
+                        </td>
+                        <td>2</td>
+               <br> VS<a href=""></a> ckg balling team
+                  </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>7</td>
+                        <td>8</td>
+                        <td>9</td>
+
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>11</td>
+                        <td>12</td>
+                        <td>13</td>
+                        <td>14</td>
+                        <td>15</td>
+                        <td>16</td>
+
+                    </tr>                    <tr>
+                        <td>17</td>
+                        <td>18</td>
+                        <td>19</td>
+                        <td>20</td>
+                        <td>21</td>
+                        <td>22</td>
+                        <td>23</td>
+
+                    </tr>                    <tr>
+                        <td>24</td>
+                        <td>25</td>
+                        <td>26</td>
+                        <td>27</td>
+                        <td>28</td>
+                        <td>29</td>
+                        <td>30</td>
+
+                    </tr>
+
+                    
+
+                </tbody>
+            </table>
+        </div>
+    </main>
+</body>
+
+</html>
