@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2022-9-10</title>
+    <style>
+        .ScoreBoard{
+            background-color: green;
+            color: white;
+            font-size: 17pt;
+            margin-bottom: 15px;
+            margin-top: 10px;
+            
+        }
+        .ScoreBoard tr{
+            background-color: black;
+        }
+        .midasi{
+            background-color: skyblue;
+            color: black;
+            
+        }
+        .kousikisen{
+            background-color: rgb(121, 176, 249);
+            border: solid 1px;
+        }
+        .kyusyukurabu{
+            background-color: skyblue;
+            width: 573px;
+            margin-bottom: 10px;
+        }
+        .box {
+            position: relative;
+        }
+        .gazouTitle{
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 30pt;
+            color: black;
+            width: 400px;
+            background-color:  rgba(200, 200, 200, 0.596);
+        }
+        .gazouImge img{
+            width: 573px;
+            height: 100px;
+            object-fit: cover   ;
+        }
+        table{
+            background-color: black;
+        }
+        td{
+            background-color: black;
+            color: white;
+        }
+        .syousai{
+            background-color: black;
+            width: 573px;
+        }
+        .syousai td{
+            background-color: white;
+            color: black;
+        }
+        main{
+            margin: auto;
+            width: 800px;
+        }
+        .ScoreBoard th{
+            padding-left: 5px;
+            padding-right: 5px;
+            text-align: center;
+        }
+        .ScoreBoard td{
+            text-align: center;
+        }
+        .myMidasi{
+            background-color: gold;
+        }
+        #myMidasi2,#myMidasi3,#myMidasi4,#myMidasi5,#myMidasi6{
+            background-color: skyblue;
+            width: 4em;
+        }
+        .oversize{
+            font-size: 11pt;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="box">
+            <div class="gazouTitle">
+                試合結果の詳細
+            </div>
+            <div class="gazouImge">
+                <img src="./../ground/guraund.jpeg" alt="" width="573px">
+            </div>
+        </div>
+
+        <div class="kyusyukurabu">
+            第47回　日本選手大会　九州地区予選　in宮崎
+        </div>
+        <div class="taisenaite">
+           試合日時：2022年9月10日　12時30分～　 <span class="kousikisen">公式戦</span><br>
+           場　　所：SOKKENスタジアム<br>
+           対戦相手：VS エナジック
+        </div>
+        <div>
+            <table class="ScoreBoard" width="573px">
+                <tr>
+                   <th class="ScoreBoardName"></th>
+                   <th class="ScoreBoardKai1">1</th>
+                   <th class="ScoreBoardKai2">2</th>
+                   <th class="ScoreBoardKai3">3</th>
+                   <th class="ScoreBoardKai4">4</th>
+                   <th class="ScoreBoardKai5">5</th>
+                   <th class="ScoreBoardKai6">6</th>
+                   <th class="ScoreBoardKai7">7</th>
+                   <th class="ScoreBoardKai8">8</th>
+                   <th class="ScoreBoardKai9">9</th>
+                   <th class="ScoreBoardKaiKei">計</th>
+                     
+                </tr>
+                <tr>
+                    <td class="oversize">沖データCKG</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>9</td>
+                </tr>
+                <tr>
+                    <td class="oversize">エナジック</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>2</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>3</td>
+                    <td>0</td>
+                    <td>5</td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <!-- <style>
+                td,th{
+                    border: solid 1px;
+                }
+            </style> -->
+            <table class="syousai">
+                <tr class="midasi">
+                    <div class="team">
+                    <th></th>
+                    <th>沖データCKG</th>
+                    <th>エナジック</th>
+                    </div>
+
+                </tr>
+                <tr>
+                    <td id="myMidasi2" class="midasi">投手</td>
+                    <td>田代、江上</td>
+                    <td>野原-井手-橋本-山下-大原-河邉</td>
+                </tr>
+                <tr>
+                    <td id="myMidasi3" class="midasi">捕手</td>
+                    <td>日野</td>
+                    <td>伊東</td>
+                </tr>
+                <tr>
+                    <td id="myMidasi4" class="midasi">本塁打</td>
+                    <td>松崎</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td id="myMidasi5"class="midasi">二塁打</td>
+                    <td>樋口、日野</td>
+                    <td>古堅</td>
+                </tr>
+                <tr>
+                    <td id="myMidasi6"  class="midasi">三塁打</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+    </main>
+</body>
+</html>
