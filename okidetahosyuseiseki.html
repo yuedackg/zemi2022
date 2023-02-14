@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>沖データ選手成績</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+        'use strict';
+
+        $(function () {
+
+            /**
+             * クリックイベント
+             */
+            $('th').click(function () {
+                // 情報取得
+                let ele = $(this).attr('id');
+                let sortFlg = $(this).data('sort');
+
+                // リセット
+                $('th').data('sort', "");
+
+                // ソート順序
+                if (sortFlg == "" || sortFlg == "desc") {
+                    sortFlg = "asc";
+                    $(this).data('sort', "asc");
+                } else {
+                    sortFlg = "desc";
+                    $(this).data('sort', "desc");
+                }
+
+                // テーブルソート処理
+                sortTable(ele, sortFlg);
+            });
+
+            /**
+             * テーブルソートメソッド
+             * 
+             * @param ele 
+             * @param sortFlg 
+             */
+            function sortTable(ele, sortFlg) {
+                let arr = $('table tbody tr').sort(function (a, b) {
+                    // ソート対象が数値の場合
+                    if ($.isNumeric($(a).find('td').eq(ele).text())) {
+                        let aNum = Number($(a).find('td').eq(ele).text());
+                        let bNum = Number($(b).find('td').eq(ele).text());
+
+                        if (sortFlg == "asc") {
+                            return aNum - bNum;
+                        } else {
+                            return bNum - aNum;
+                        }
+                    } else { // ソート対象が数値でない場合
+                        let sortNum = 1;
+
+                        // 比較時は小文字に統一
+                        if ($(a).find('td').eq(ele).text().toLowerCase() > $(b).find('td').eq(ele).text().toLowerCase()) {
+                            sortNum = 1;
+                        } else {
+                            sortNum = -1;
+                        }
+                        if (sortFlg == "desc") {
+                            sortNum *= (-1);
+                        }
+
+                        return sortNum;
+                    }
+                });
+                $('table tbody').html(arr);
+            }
+
+        });
+    </script>
+
+    <style>
+        .title {
+            font-size: 60px;
+            border-bottom: 1px solid;
+            border-color: rgb(204, 199, 199);
+            border-width: 2px;
+            text-align: center;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            font-family: HGS明朝E;
+        }
+
+
+
+        nav div {
+            width: calc(800 / 4);
+            justify-content: space-around;
+        }
+
+        nav {
+            display: flex;
+            flex-direction: row;
+            box-sizing: border-box;
+        }
+
+        .sennsyu {
+            font-size: 30px;
+            background-color: rgb(81, 80, 80);
+            color: white;
+            margin-left: 100px;
+            padding-left: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            width: 1320px;
+            font-family: HGS明朝E;
+        }
+
+
+        th,
+        td {
+            border: solid 1px black;
+            margin: 0;
+            background-color: white;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        table {
+            background-color: gray;
+            font-size: 20px;
+
+        }
+
+        .narabikae {
+            color: red;
+            padding-bottom: 10px;
+            padding-top: 10px;
+            margin-left: 100px;
+            font-weight: 600;
+        }
+
+        .hizuke {
+            text-align: right;
+            margin-right: 50px;
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        th {
+            background-color: rgb(228, 225, 225);
+            color: blue;
+            padding-top: 35px;
+            padding-bottom: 35px;
+            padding-left: 20px;
+            padding-right: 20px;
+            writing-mode: vertical-rl;
+            text-align: justify;
+        }
+
+        td {
+            padding: 10px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        nav {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        .font_space {
+            letter-spacing: -10em;
+        }
+
+        .koumoku {
+            font-family: HGS明朝E;
+        }
+
+        table {
+            border: solid 10px rgb(176, 175, 175);
+        }
+
+        .hyou table {
+            margin: auto;
+        }
+
+        .sennsyumei {
+            font-family: HGS明朝E;
+        }
+
+        .pozisyonn {
+            width: 1320px;
+            margin-left: 100px;
+            padding-left: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            background-color: rgb(176, 175, 175);
+        }
+
+        thead th {
+            color: black;
+        }
+
+        .sennsyumei td a {
+            color: black;
+            /* text-decoration: none; */
+        }
+
+        a:link,
+        a:visited,
+        a:hover,
+        a:active {
+            color: black;
+        }
+        .tousyu,
+        .yasyu,
+        .hosyu,
+        .naiyasyu,
+        .gaiyasyu{
+            background-color: white;
+            padding: 3px;
+            margin-right: 10px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="title">
+            沖データ選手成績
+        </div>
+    </header>
+
+    <nav>
+        <div class="sennsyu">
+            個人成績
+        </div>
+    </nav>
+
+    <div class="pozisyonn">
+        表示条件： 
+        <span class="tousyu">  <a href="okidetatousyuseiseki.html">投手</a></span> 
+         <span class="yasyu">  <a href="okidetayasyuseiseki.html">野手</a></span>
+         <span class="hosyu">  <a href="okidetahosyuseiseki.html">捕手</a></span>
+         <span class="naiyasyu">  <a href="okidetanaiyasyuseiseki.html">内野手</a></span>
+         <span class="gaiyasyu">  <a href="okidetagaiyasyuseiseki.html">外野手</a></span>
+    </div>
+
+    <div class="narabikae">
+        ※各項目をクリックすると昇順、降順に並べ替えれます。
+    </div>
+    <div class="hyou">
+        <table>
+            <thead>
+                <tr class="koumoku">
+                    <th id="0" data-sort="">背　番　号</th>
+                    <th id="1" data-sort="">選　手　名</th>
+                    <div class="font_space">
+                        <th id="2" data-sort="">守　備　位　置</th>
+                    </div>
+                    <th id="3" data-sort="">所　　　属</th>
+                    <th id="4" data-sort="">打　　　率</th>
+                    <th id="5" data-sort="">試　合　数</th>
+                    <th id="6" data-sort="">打　　　席</th>
+                    <th id="7" data-sort="">打　　　数</th>
+                    <th id="8" data-sort="">安　　　打</th>
+                    <th id="9" data-sort="">二　塁　打</th>
+                    <th id="10" data-sort="">三　塁　打</th>
+                    <th id="11" data-sort="">本　塁　打</th>
+                    <th id="12" data-sort="">打　　　点</th>
+                    <th id="13" data-sort="">三　　　振</th>
+                    <th id="14" data-sort="">四　死　球</th>
+                    <th id="15" data-sort="">盗　　　塁</th>
+                    <th id="16" data-sort="">出　塁　率</th>
+                </tr>
+
+            </thead>
+
+            <tr>
+                <td>22</td>
+                <td> <a href="22uryu.html">瓜生　凌汰</a> </td>
+                <td>捕手</td>
+                <td>沖データ</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>25</td>
+                <td> <a href="25-hino.html">日野　友太</a> </td>
+                <td>捕手</td>
+                <td>沖データ</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+        </table>
+    </div>
+
+
+    <div class="hizuke">
+        <div>
+            2022/12/16現在
+        </div>
+    </div>
+
+
+</body>
+
+</html>
