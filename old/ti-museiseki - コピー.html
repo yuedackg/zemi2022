@@ -1,0 +1,258 @@
+<meta charset="UTF-8"> 
+<style>
+    div {
+        /* border: solid 1px red; */
+        box-sizing: border-box;
+
+    }
+
+    .pagetitle {
+        font-size: large;
+        border-bottom: solid 5px gray;
+    }
+
+    .nendo {
+        text-align: right;
+    }
+
+    main {
+        width: 800px;
+        background-color: antiquewhite;
+        margin: auto;
+    }
+
+    .tabmidasi {
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+    }
+
+    /*     
+    <div class="tab_wrap">
+        <input id="tab1" type="radio" name="tab_btn" checked>
+        <input id="tab2" type="radio" name="tab_btn">
+        <input id="tab3" type="radio" name="tab_btn">
+    
+        <div class="tab_area">
+            <label class="tab1_label" for="tab1">tab1</label>
+            <label class="tab2_label" for="tab2">tab2</label>
+            <label class="tab3_label" for="tab3">tab3</label>
+        </div>
+        <div class="panel_area">
+            <div id="panel1" class="tab_panel">
+                <p>panel1</p>
+            </div>
+            <div id="panel2" class="tab_panel">
+                <p>panel2</p>
+            </div>
+            <div id="panel3" class="tab_panel">
+                <p>panel3</p>
+            </div>
+        </div>
+    </div>
+    Xhtml */
+
+    ..tab_wrap {
+        width: 500px;
+        margin: 80px auto;
+    }
+
+    input[type="radio"] {
+        display: none;
+    }
+
+    .tab_area {
+        font-size: 0;
+        margin: 0 10px;
+    }
+
+    .tab_area label {
+        width: 150px;
+        margin: 0 5px;
+        display: inline-block;
+        padding: 12px 0;
+        color: #999;
+        background: #ddd;
+        text-align: center;
+        font-size: 13px;
+        cursor: pointer;
+        transition: ease 0.2s opacity;
+    }
+
+    .tab_area label:hover {
+        opacity: 0.5;
+    }
+
+    .panel_area {
+        background: #fff;
+    }
+
+    .tab_panel {
+        width: 100%;
+        padding: 80px 0;
+        display: none;
+    }
+
+    .tab_panel p {
+        font-size: 14px;
+        letter-spacing: 1px;
+        text-align: center;
+    }
+
+    #tab1:checked~.tab_area .tab1_label {
+        background: #fff;
+        color: #000;
+    }
+
+    #tab1:checked~.panel_area #panel1 {
+        display: block;
+    }
+
+    #tab2:checked~.tab_area .tab2_label {
+        background: #fff;
+        color: #000;
+    }
+
+    #tab2:checked~.panel_area #panel2 {
+        display: block;
+    }
+
+    #tab3:checked~.tab_area .tab3_label {
+        background: #fff;
+        color: #000;
+    }
+
+    #tab3:checked~.panel_area #panel3 {
+        display: block;
+    }
+</style>
+<main>
+    <div class="pagetitle">アカデミーチーム全体成績</div>
+    <div class="nendo">
+        <select name="" id="">
+            <option value="2022">2022</option>
+            <option value="2022">2021</option>
+            <option value="2022">2020</option>
+
+        </select>
+    </div>
+    <div class="tab_wrap">
+        <input id="tab1" type="radio" name="tab_btn">
+        <input id="tab2" type="radio" name="tab_btn" checked>
+
+        <div class="tab_area">
+            <label class="tab1_label tabmidasi" for="tab1">チーム投手成績</label>
+            <label class="tab2_label tabmidasi" for="tab2">チーム打撃成績</label>
+        </div>
+        <div class="panel_area">
+            <div id="panel1" class="tab_panel">
+                <p>チーム投手成績</p>
+            </div>
+            <div id="panel2" class="tab_panel">
+                <!-- <p>チーム打撃成績</p> -->
+
+
+                <div class="pl_tableFix01 js-tableScroll">
+<style>
+    
+    table thead th{
+        width: 60px;
+        text-align: center;
+    }
+    table tbody td{
+        text-align: center;
+    }
+</style>
+                    <table class="pl_table02">
+                        <colgroup>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                        </colgroup>
+
+
+
+
+
+                        <thead>
+                            <tr>
+                                <!-- <th class="js-threshold pl_hideCell">&nbsp;</th> -->
+                                <th>打<br>率</th>
+
+                                <th>試<br>合<br>数</th>
+                                <th>打<br>席</th>
+                                <th>打<br>数</th>
+                                <th>安<br>打</th>
+                                <th>二<br>塁<br>打</th>
+                                <th>三<br>塁<br>打</th>
+                                <th>本<br>塁<br>打</th>
+                                <th>打<br>点</th>
+                                <th>三<br>振</th>
+                                <th>四<br>死<br>球</th>
+                                <th>盗<br>塁</th>
+                                <th>出<br>塁<br>率</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <!-- <td class="pl_hideCell">&nbsp;</td> -->
+                                <td>0.185</td>
+                                <td>10</td>
+                                <td>132</td>
+                                <td>107</td>
+                                <td>34</td>
+                                <td>4</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>12</td>
+                                <td>15</td>
+                                <td>18</td>
+                                <td>8</td>
+                                <td>0.342</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</main>
+<style>
+    /* th{
+        border-bottom: solid 1px rgb(19, 13, 11);
+        border-left: solid 1px rgb(14, 8, 6);
+        border-right: solid 1px rgb(8, 6, 6);
+        border-top: solid 1px rgb(8, 6, 6);
+    } */
+    table {
+        background-color: black;
+    }
+
+    th,
+    td {
+        background-color: white;
+    }
+
+    th {
+        background-color: rgb(160, 158, 158);
+    }

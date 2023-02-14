@@ -1,0 +1,103 @@
+<!-- 
+    【製作者情報】
+    学籍番号：
+    氏名：　　樋口
+ -->
+<link rel="stylesheet" href="./sample.css">
+<link rel="stylesheet" href="./sokuhou.css">
+<style>
+    :root{
+        --my-iframe-width: 1000px;
+        --my-nav-width-rate: 20%;
+        --my-main-width-rate: 80%;
+    }
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    header,
+    nav,
+    main,
+    div {
+        box-sizing: border-box;
+    }
+
+    body {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    header {
+        width: 100%;
+        border: solid 1px red;
+    }
+
+    nav {
+        width: var(--my-nav-width-rate);
+    }
+
+    main {
+        width: calc ( var(--my-main-width-rate )  ) ;
+    }
+
+    .leftmeny {
+        width: 100%;
+    }
+
+    .MaeAtosiai {
+        justify-content: space-between;
+    }
+
+    th {
+        color: white;
+        background-color: green;
+    }
+
+    td {
+        color: white;
+        background-color: green;
+    }
+
+    .ScoreBoardName {
+        width: 200px;
+    }
+
+    td {
+        width: 50px;
+        border: solid 2px red;
+        padding: 5px;
+        text-align: center;
+    }
+    #contents-iframe{
+        width: calc( );
+    }
+</style>
+<header>
+    header
+</header>
+
+<nav>
+    <div class="leftmeny">
+        試合情報トップ
+    </div>
+
+    <div class="leftmeny">
+        試合速報
+    </div>
+
+    <div class="leftmeny">
+        試合日程
+    </div>
+
+    <div class="leftmeny">
+        <a href="./playaerseiseki.html" target="content">選手成績</a>
+
+    </div>
+
+
+</nav>
+
+<main name="content">
+    <iframe src="./siaisokuho-main.html" frameborder="0" id="contents-iframe" scrolling="no" height="700px"></iframe>
+</main>

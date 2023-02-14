@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./siaisokuho-main.css">
+
+    <style>
+        :root{
+            --my-score-board-bg-color:green;
+            --my-score-board-color:white;
+            --my-score-board-name-col-width:200px;
+
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .MaeAtosiai {
+            justify-content: space-around;
+        }
+
+        th {
+            color: var(--my-score-board-color);
+            background-color: var(--my-score-board-bg-color);
+        }
+
+        td {
+            color: var(--my-score-board-color);
+            background-color: var(--my-score-board-bg-color);
+        }
+
+        .ScoreBoardName {
+            width: var(--my-score-board-name-col-width);
+        }
+
+        td {
+            width: 50px;
+            padding: 5px;
+            text-align: center;
+        }
+
+        .日付 {
+            background-color: skyblue;
+            margin: 5px;
+            margin-bottom: 5px;
+        }
+
+        .名 {
+            background-color: skyblue;
+            margin: 5px;
+        }
+
+        div {
+            /* border: solid 1px gray; */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <div class="日付">
+            2022/10/29(金)
+        </div>
+
+        <div class="mytitle">
+            <!-- <div class="チーム名"> -->
+            沖コンピュータ教育学院　対　日本製鉄大分
+        </div>
+
+        <div class="container MaeAtosiai">
+            <a href="">
+                <div class="leftArrow">前の試合</div>
+            </a>
+            <div>試合日程・結果</div>
+            <a href="">
+                <div class="rightArrow">次の試合</div>
+            </a>
+
+        </div>
+
+        <div>
+
+            <style>
+
+            </style>
+            <div class="vs-header">
+                <div>
+                    <div> 沖コンピュータ教育学院 </div>
+                    <div> <img src="./img/CKGrogo.png" alt=""> </div>
+                </div>
+
+                <div>
+                    12:00
+                </div>
+                <div>
+                    <div> 日本製鉄大分 </div>
+                    <div> <img src="./img/unnamed.jpg" width="100px"> </div>
+                </div>
+
+            </div>
+        </div>
+        <table class="ScoreBoard">
+            <tr>
+                <th class="ScoreBoardName"></th>
+                <th class="ScoreBoardKai1">1</th>
+                <th class="ScoreBoardKai2">2</th>
+                <th class="ScoreBoardKai3">3</th>
+                <th class="ScoreBoardKai4">4</th>
+                <th class="ScoreBoardKai5">5</th>
+                <th class="ScoreBoardKai6">6</th>
+                <th class="ScoreBoardKai7">7</th>
+                <th class="ScoreBoardKai8">8</th>
+                <th class="ScoreBoardKai9">9</th>
+                <th class="ScoreBoardKaiKei">計</th>
+            </tr>
+            <tr>
+                <td>沖データ</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>日本製鉄大分</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>1</td>
+                <td>×</td>
+                <td>2</td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>

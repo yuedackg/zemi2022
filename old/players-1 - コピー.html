@@ -1,0 +1,140 @@
+<!-- 表の右側の線が表示されない -->
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2</title>
+    <!-- <link rel="stylesheet" href="./sample.css"> -->
+    <style>
+        table,tr,td {
+            background-color: black;
+
+        }
+        td{
+            margin: 0;
+            padding: 0;
+            border: solid 1px black;
+            background-color: red;
+        }
+        div{
+            box-sizing: border-box;
+            border-bottom: solid 1px black;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            /* border: solid 1px #000000; */
+            /* border-bottom: solid 1px #000000; */
+            /* border-right: solid 1px #000000; */
+        }
+        .daimei{
+            border-bottom: solid 1px #000000;
+            /* border-right: solid 1px #000000; */
+            font-size: 40px;
+        }
+        .width25{
+            width: 25%;
+            /* border-bottom: solid 1px #000000;
+            border-right: solid 1px #000000;
+            border-left: solid 1px #000000; */
+            border: none ;
+        }
+        .sensyu{
+            /* border-bottom: solid 1px #000000; */
+            border-right: solid 1px #000000;
+            text-decoration: none;
+            
+        }
+        .sensyu:nth-child(1){
+            background-color: red;
+            border-left: solid 1px #000000;
+        }
+        .midasi{
+            background-color: #c0c0c0;
+            /* border-bottom: solid 1px #000000; */
+            /* border-right: solid 1px #000000; */
+            text-align: center;
+        }
+        
+        .container{
+            border-bottom: none;
+            
+        }
+        a{
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main>
+
+        <div class="daimei">
+            <img src="header1_title.jpg" alt="">
+        </div>
+
+        <div class="container">
+            <div class="width25">
+                <div class="midasi">
+                    投手
+                </div>
+                <div class="sensyu"><a href="./players/14yazima.html">＃１４ 矢島　有也</a></div>
+                <div class="sensyu"><a href="./players/16tashiro.html">＃１６ 田代　昌椰</a></div>
+                <div class="sensyu"><a href="./players/30miyazaki.html">＃３０ 宮﨑　大地</a></div>
+                <div class="sensyu"><a href="./players/34tokunaga.html">＃３４ 徳永　怜皇</a></div>
+                <div class="sensyu"><a href="./players/42yamashita.html">＃４２ 山下　弘翔</a></div>
+                <div class="sensyu"><a href="./players/45yuhara.html">＃４５ 柚原　和真</a></div>
+                <div class="sensyu"><a href="./players/52matsumura.html">＃５２ 松村　和樹</a></div>
+                <div class="sensyu"><a href="./players/56takeda.html">＃５６ 武田　凛</a></div>
+            </div>
+            <div class="width25">
+                <div class="midasi">
+                    捕手
+                </div>
+                <div class="sensyu"><a href="./players/22uryu.html">＃２２ 瓜生　凌汰</a></div>
+                <div class="sensyu"><a href="./players/25hino.html">＃２５ 日野　友太</a></div>
+                <div class="sensyu">　</div>
+                <div class="sensyu">　</div>
+                <div class="sensyu">　</div>
+                <div class="sensyu">　</div>
+                <div class="sensyu">　</div>
+                <div class="sensyu">　</div>
+            </div>
+            <div class="width25">
+                <div class="midasi">
+                    内野手
+                </div>
+                <div class="sensyu"><a href="./players/7hujioka.html">＃７   藤岡　陸</a></div>
+                <div class="sensyu"><a href="./players/24torikai.html">＃２４ 鳥飼　竜之介</a></div>
+                <div class="sensyu"><a href="./players/31murayama.html">＃３１ 村山　聖斗</a></div>
+                <div class="sensyu"><a href="./players/37matsuzaki.html">＃３７ 松﨑　晴人</a></div>
+                <div class="sensyu"><a href="./players/41mizutani.html">＃４１ 水谷　克希</a></div>
+                <div class="sensyu"><a href="./players/48morimoto.html">＃４８ 森本　大智</a></div>
+                <div class="sensyu"><a href="./players/51shibata.html">＃５１ 柴田　和典</a></div>
+                <div class="sensyu">　</div>
+
+            </div>
+            <div class="width25">
+                <div class="midasi">
+                    外野手
+                </div>
+                <div class="sensyu"><a href="./players/0ishikawa.html">＃０  石川　柚月</a></div>
+                <div class="sensyu"><a href="./players/10higuchi.html">＃１０ 樋口　昇樹</a></div>
+                <div class="sensyu"><a href="./players/28nishimura.html">＃２８ 西村　雄大</a></div>
+                <div class="sensyu"><a href="./players/43sumida.html">＃４３ 角田　延大</a></div>
+                <div class="sensyu"><a href="./players/47munaoka.html">＃４７ 宗岡　錬</a></div>
+                <div class="sensyu"><a href="./players/57mayumi.html">＃５７ 真弓　大翔</a></div>
+                <div class="sensyu"><a href="./players/58honda.html">＃５８ 本多　将也</a></div>
+                <div class="sensyu"><a href="./players/96kawabata.html">＃９６ 河端　太陽</a></div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
