@@ -1,0 +1,79 @@
+.ScoreBoard{
+    background-color: green;
+    color: white;
+    font-size: 17pt;
+    margin-bottom: 15px;
+    margin-top: 10px;
+    
+}
+.ScoreBoard tr{
+    background-color: black;
+    
+}
+.midasi{
+    background-color: skyblue;
+    color: black;
+    
+}
+.kousikisen{
+    background-color: rgb(121, 176, 249);
+    border: solid 1px;
+}
+.kyusyukurabu{
+    background-color: skyblue;
+    width: 573px;
+    margin-bottom: 10px;
+}
+.box {
+    position: relative;
+}
+.gazouTitle{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 30pt;
+    color: black;
+    width: 400px;
+    background-color:  rgba(200, 200, 200, 0.596);
+}
+.gazouImge img{
+    width: 573px;
+    height: 100px;
+    object-fit: cover   ;
+}
+table{
+    background-color: black;
+}
+td{
+    background-color: black;
+    color: white;
+}
+.syousai{
+    background-color: black;
+}
+.syousai td{
+    background-color: white;
+    color: black;
+    width: 573px;
+}
+main{
+    margin: auto;
+    width: 800px;
+}
+.ScoreBoard th{
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: center;
+    
+}
+.ScoreBoard td{
+    text-align: center;
+
+}
+#myMidasi2,#myMidasi3,#myMidasi4,#myMidasi5,#myMidasi6{
+    background-color: skyblue;
+    width: 6em;
+}
+.oversize{
+    font-size: 11pt;
+}
