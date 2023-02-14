@@ -1,35 +1,9 @@
 <!-- 
     【製作者情報】
-    学籍番号：
+    学籍番号：20043
     氏名：　　角田
+    制作物：　グルメトップ＞デリバリー
  -->
-<!-- 
-    残作業 
-    ・全体の配置の見直し
-    　
-    ・メニュを表で作成しなおす。
-    ・背景色の設定
-    ・文字位置の設定（中央ぞろえなど）
-
--->
-<!-- 
-    今後のスケジュール
-    ・1/16　欠席
-    ・1/17  画像の挿入・CSSの追加
-    ・1/18  全体の整理
-    ・1/20　全体の完成
-    ・1/23　画面のハードコピーを画面設計書に反映させる
-    ・1/23~　ゼミ発表
-    ・1/24　卒業判定会議資料の提出
-    ・1/26　卒業判定会議（17:00~）
- -->
-<!-- <div style="border: double 2px gold;background-color: gold;margin-bottom: 20p
-    <img src="./comment/deribari-01.png" alt=""><br>
-    <img src="./comment/deribari-02.png" alt=""><br>
-    
-</div> -->
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -38,40 +12,148 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="sample.css">
+    <link rel="stylesheet" href="./sample.css">
+    <link rel="stylesheet" href="./delebary.css">
     <style>
-        div {
-            box-sizing: border-box;
-            border: solid 1px gray;
-            padding: 5px;
+        :root {
+            --my-cell-bg-color: red;
+            --my-cell-titlecolor: rgba(255, 255, 0, 0.5);
         }
 
-        /* img {
+        div {
+            box-sizing: border-box;
+            /* border: solid 1px gray; */
+            padding: 3px;
+        }
+
+        .titlebox>div:nth-child(1) {
+            width: 40%;
+
+        }
+
+        .titlebox>div:nth-child(2) {
+            width: calc(100% - 40%);
+        }
+
+        .logo {
             width: 100px;
             height: 100px;
-        } */
+        }
 
-        .container {
-            display: flex;
-            flex-wrap: wrap;
+        .innerimg {
+            justify-content: center;
+
+        }
+
+        .baga {
+            background-color: var(--my-cell-bg-color);
+        }
+
+        header {
+            font-size: 25pt;
+            padding: 15px;
+        }
+
+        .meneitem {
+            position: relative;
         }
 
         .sixyouhinnmei {
-            font-size: 18pt;
-            font-weight: 900;
-            background-color: darkorange;
+            position: absolute;
+            background-color: var(--my-cell-titlecolor);
         }
 
-        .smallpic {
-            justify-content: space-around;
-        }
-
-        .smallpic>div {
-            width: 40%;
+        .meneitem .sixyouhinnmei {
+            position: absolute;
         }
 
         .pagedomino {
             display: none;
+        }
+
+        .pagebennto {
+            /* display: block; */
+        }
+
+        .smallpic>div {
+            width: 50%;
+        }
+
+        .niretu>div {
+            width: 47%;
+        }
+
+        .hafpiture {
+            position: relative;
+            background-color: var(--my-cell-bg-color);
+            margin: 5px;
+        }
+
+        .hafpituretitle {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            background-color: var(--my-cell-titlecolor);
+            color: white;
+            font-weight: 900;
+            text-align: center;
+        }
+
+        .tennpomei {
+            font-size: 20pt;
+            color: green;
+        }
+
+        .bentoitem {
+            position: relative;
+            background-color: var(--my-cell-bg-color);
+            margin: 5px;
+        }
+
+        .bentoname {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            background-color: var(--my-cell-titlecolor);
+            color: white;
+            font-weight: 900;
+            text-align: center;
+        }
+
+        .bentolist>div {
+            width: 45%;
+        }
+        nav{
+            display: flex;
+        }
+        nav>label{
+            width: calc(100% / 2);
+            border-radius: 15px;
+            padding: 5px;
+            text-align: center;
+            margin: 5px;
+            border: solid 1px gray;
+        }
+        .selector{
+            display: none;
+        }
+        main{
+            display: none;
+        }
+
+        #btnPizza:checked ~ .pagedomino{
+            display: block;
+        }
+        #btnBento:checked ~ .pagebennto{
+            display: block;
+        }
+        footer{
+            display: flex;
+            justify-content: center;
+            border-top: 3px solid black;
+            margin-top: 15px;
         }
     </style>
 </head>
@@ -80,13 +162,22 @@
     <header>
         デリバリー情報
     </header>
+    <nav>
+
+        <label for="btnPizza">domino pizza</label>
+        <label for="btnBento">お惣菜の老舗専門店</label>
+
+
+    </nav>
+    <input type="radio" class="selector" id="btnPizza" name="navMenu" checked="checked" >
     <main class="pagedomino">
-        <div class="container">
-            <div class="container">
-                <div><img src="./image-gurume/dominopiza.jpg" alt="" width="100%"></div>
+        <div class="container titlebox">
+            <div>
+                <div class="innerimg container"><img class="logo" src="./image-gurume/スクリーンショット 2023-02-08 141532.jpg"
+                        alt="" width="100%"></div>
             </div>
             <div>
-                <div>
+                <div class="tennpomei">
                     店舗名:
                     Dominopiza大橋駅南口
                 </div>
@@ -100,155 +191,83 @@
             </div>
         </div>
 
-
-        <style>
-            .menuitem {
-                position: relative;
-
-            }
-
-            .menuitem .sixyouhinnmei {
-                position: absolute;
-                bottom: 0;
-            }
-        </style>
-
-        <div>メニュー</div>
+        <div class="menixyu-">メニュー</div>
         <div>
             <div class="meneitem">
-                <div><img src="./image-gurume/baga-pizakuwatoro.jpg" alt="" width="100%"></div>
+                <div class="baga"><img src="./image-gurume/baga-pizakuwatoro.gif" alt="" width="100%"></div>
                 <div class="sixyouhinnmei">バーガーピザクワトロ</div>
             </div>
-            <div>
-                <div><img src="./image-gurume/bixtugudaxtuguba-ga-.jpg" alt="" width="100%"></div>
+            <div class="meneitem">
+                <div class="bixtuku baga"><img src="./image-gurume/bixtugudaxtuguba-ga-.gif" alt="" width="100%"></div>
                 <div class="sixyouhinnmei">ビックチーズバーガー</div>
             </div>
-            <div>
-                <div><img src="./image-gurume/dominosuba-ga-.jpg" alt="" width="100%"></div>
+            <div class="meneitem">
+                <div class="dominosu baga"><img src="./image-gurume/dominosuba-ga-.gif" alt="" width="100%"></div>
                 <div class="sixyouhinnmei">ドミノスバーガー</div>
             </div>
         </div>
-        <div class="container smallpic">
-            <div>
-                <div><img src="./image-gurume/dszextupinnti-zuba-ga-.jpg" alt="" width="100%"></div>
-                <div class="sixyouhinnmei">D`s絶品チーズバーガー</div>
+        <div class="container smallpic niretu">
+            <div class="hafpiture">
+                <div class="ds baga"><img src="./image-gurume/dszextupinnti-zuba-ga-.gif" alt="" width="100%"></div>
+                <div class="hafpituretitle">D`s絶品チーズバーガー</div>
             </div>
-            <div>
-                <div><img src="./image-gurume/tixeda-be-konba-ga-.jpg" alt="" width="100%"></div>
-                <div class="sixyouhinnmei">チェダーベーコンバーガー</div>
+            <div class="hafpiture">
+                <div class="cheda baga"><img src="./image-gurume/tixeda-be-konba-ga-.gif" alt="" width="100%"></div>
+                <div class="hafpituretitle">チェダーベーコンバーガー</div>
             </div>
         </div>
     </main>
-    <style>
-        div {
-            box-sizing: border-box;
-            /* border: solid 1px gray; */
-            padding: 5px;
-        }
-
-        /* img {
-            width: 100px;
-            height: 100px;
-        } */
-
-        .container {
-            display: flex;
-            flex-wrap: wrap;
-        }
-
-        .sixyouhinnmei {
-            font-size: 18pt;
-            font-weight: 900;
-            background-color: yellow;
-        }
-
-        .smallpic {
-            justify-content: space-around;
-        }
-
-        .smallpic>div {
-            width: 40%;
-        }
-
-        .pagebennto {
-            display: block;
-        }
-    </style>
-    </head>
-
-    <body>
-        <header>
-            お弁当情報
-        </header>
-        <main class="pagebennto">
+    <input type="radio" class="selector" id="btnBento" name="navMenu">
+    <main class="pagebennto">
+        <div class="container">
+        </div>
+        <div>
+            <div class="tennpomei">
+                店舗名:
+                お惣菜の老舗専門店　華かご
+            </div>
             <div class="container">
-                <div class="container">
-                    <div><img src="" alt="" width="100%"></div>
-                </div>
-                <div>
-                    <div>
-                        店舗名:
-                        お惣菜の老舗専門店　華かご
-                    </div>
-                    <div>
-                        住所<br>
-                        〒815-0003<br>
-                        営業時間11:00~24:00<br>
-                        福岡市南区大橋
-                        092-557-8820
-                    </div>
-                </div>
+                <div><img src="./image-gurume/スクリーンショット 2023-02-06 140228.jpg" alt="" width="100%"></div>
             </div>
-
-
-            <style>
-                .menuitem {
-                    position: relative;
-
-                }
-
-                .menuitem .sixyouhinnmei {
-                    position: absolute;
-                    bottom: 0;
-                }
-            </style>
-
-            <div>メニュー</div>
-            <div>
-                <div class="meneitem">
-                    <div><img src="" alt="" width="100%"></div>
-                    <div class="sixyouhinnmei">唐揚げ弁当</div>
+        </div>
+        <div class="menixyu-">お弁当情報</div>
+        <div class="container smallpic bentolist">
+            <div class="bentoitem">
+                <div class="centering"><img src="./image-gurume/スクリーンショット 2023-02-06 152025.jpg" alt="" width="50%">
                 </div>
-                <div>
-                    <div><img src="" alt="" width="100%"></div>
-                    <div class="sixyouhinnmei">牛焼肉弁当</div>
-                </div>
-                <div>
-                    <div><img src="" alt="" width="100%"></div>
-                    <div class="sixyouhinnmei">ハンバーグ弁当</div>
-                </div>
+                <div class="bentoname">トンテキ弁当</div>
             </div>
-            <div class="container smallpic">
-                <div>
-                    <div><img src="" alt="" width="33%"></div>
-                    <div class="sixyouhinnmei">トンテキ弁当</div>
+            <div class="bentoitem">
+                <div class="centering"><img src="./image-gurume/スクリーンショット 2023-02-06 152047.jpg" alt="" width="50%">
                 </div>
-                <div>
-                    <div><img src="" alt="" width="33%"></div>
-                    <div class="sixyouhinnmei">チキン南蛮弁当</div>
-                </div>
-                <div>
-                    <div><img src="" alt="" width="33%"></div>
-                    <div class="sixyouhinnmei">酢豚弁当</div>
-                </div>
+                <div class="bentoname">チキン南蛮弁当</div>
             </div>
-        </main>
-        </main>
-        <footer>
+            <div class="bentoitem">
+                <div class="centering"><img src="./image-gurume/スクリーンショット 2023-02-06 152107.jpg" alt="" width="50%">
+                </div>
+                <div class="bentoname">酢豚弁当</div>
+            </div>
+            <div class="bentoitem">
+                <div class="centering"><img src="./image-gurume/スクリーンショット 2023-02-06 140430.jpg" alt="" width="50%">
+                </div>
+                <div class="bentoname">唐揚げ弁当</div>
+            </div>
+            <div class="bentoitem">
+                <div class="centering"><img src="./image-gurume/スクリーンショット 2023-02-06 151936.jpg" alt="" width="50%">
+                </div>
+                <div class="bentoname">牛焼肉弁当</div>
+            </div>
+            <div class="bentoitem">
+                <div class="centering"><img src="./image-gurume/スクリーンショット 2023-02-06 152002.jpg" alt="" width="50%">
+                </div>
+                <div class="bentoname">ハンバーグ弁当</div>
+            </div>
+        </div>
+    </main>
 
-        </footer>
-        <!-- 角田 -->
 
-    </body>
+    <footer>
+<div>copyright (c) 2023,コンピュータ教育学院メディアコミュニケーション</div>
+    </footer>
 
 </html>

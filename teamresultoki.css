@@ -1,0 +1,70 @@
+.tabs {
+    background-color: white;
+    margin-top: 50px;
+     padding-bottom: 40px; 
+    /*⇦ 個々の余白で下方に隙間ができる　02.06修正 */
+    box-shadow: 0 0 10px rgda(0.0.0.0.2);
+    width: 700px;
+    margin: 0 auto;
+}
+
+.tab_item {
+    width: calc(100% / 2);
+    height: 50px;
+    border-bottom: 3px solid skyblue;
+    background-color: lightgray;
+    line-height: 50px;
+    font-size: 20px;
+    color: black;
+    text-align: center;
+    display: block;
+    float: left;
+    font-weight: bold;
+    transition: all 0.2 ease;
+
+}
+
+.title {
+    color: black;
+    background-color: aqua;
+    padding: 5px;
+    margin: top 10px;
+    ;
+}
+
+.tab_item:hover {
+    opacity: 0.75;
+
+}
+
+input[name="tab_item"] {
+    display: none;
+
+}
+
+.tab_content {
+    display: none;
+    padding: 40px 40px 0;
+    clear: both;
+    overflow: hidden;
+}
+
+#toushu-seiseki:checked~#toushu,
+#dasha-seiseki:checked~#dasha {
+    display: block;
+}
+
+table th,
+table td {
+    font-size: 20px;
+}
+
+.haikei-kuro {
+    width: 800px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+.tab_content {
+    background-color: antiquewhite;
+}

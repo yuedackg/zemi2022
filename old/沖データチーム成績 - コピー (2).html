@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="teamresult.css">
+    <style>
+        .tabs{
+            background-color: gray;
+            margin-top: 50px;
+            padding-bottom: 40px;
+            box-shadow: 0 0 10px rgba( 0,0,0,0.2);
+            width: 700px;
+            margin: 0 auto;
+        }
+        .tab_item{
+            width: calc( 100% / 2 );
+            height: 50px;
+            border-bottom: 3px solid skyblue ;
+            background-color: lightgray;
+
+        }
+        
+
+
+    </style>
+</head>
+
+<body>
+
+    <div class="tabs">
+        <input type="radio" id="toushu-seiseki" name="tab_item" checked>
+        <label class="tab_item" for="tab_item">投手成績</label>
+        <input type="radio" id="dasha-seiseki" name="tab_item">
+        <label class="tab_item" for="tab_item">打者成績</label>
+        
+        <div class="tab_content" id="toushu_contents">
+            ここに投手成績
+        </div>
+
+        <div class="tab_content" id="dasha_content">
+            ここに打者成績
+        </div>
+        
+    </div>
+
+
+    
+
+</body>
+
+</html>

@@ -1,2 +1,11 @@
-index.code-workspace
+/akasc/2022/desktop.ini
+/akasc/2022/*.ini
+/desktop.ini
+/*.ini
+/area/*.ini
+/comment/*.ini
+/dummy-image/desktop.ini
+/games/*.ini
+/goods-syasin/*.ini
 desktop.ini
+*.ini

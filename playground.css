@@ -1,0 +1,26 @@
+div {
+    /* border: solid 1px red; */
+    /* box-sizing: border-box; */
+
+}
+
+section {
+    width: calc(800px * 80%);
+    margin: 0 auto;
+}
+
+img {
+    width: 100%;
+}
+
+.annaizu {
+    width: 100%;
+}
+
+footer {
+    border-top: solid 2px black;
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: left; */
+    width: 800px;
+}

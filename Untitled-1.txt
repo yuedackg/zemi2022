@@ -1,0 +1,99 @@
+<!--
+    [製作者情報]
+    学籍番号:20011
+    氏名:    柚原和真
+-->
+<!--
+    浅件
+    ・表のサイズを一割小さくする
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<meta charset="UTF-8">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Document</title>
+  
+    <style>
+        div {
+            box-sizing: border-box;
+        }
+    </style>
+
+</head>
+
+<body>
+    <main>
+        <div class="pagetitle">沖データチーム成績</div>
+        <div class="nendo">
+            <select name="" id="">
+                <option value="2022">2022</option>
+                <option value="2022">2021</option>
+                <option value="2022">2020</option>
+
+
+            </select>
+        </div>
+        <div class="tab_wrap">
+            <input id="tabl" type="radio" name="tab_btn">
+            <input id="tab2" type="radio" name="tab_btn" checked>
+
+            <div class="tab_area">
+                <label class="tab1_labe1 tabmidasi" for="tab1">チーム投手成績</label>
+                <label class="tab2_label tabmidasi" for="tab2">チーム打者成績</label>
+            </div>
+            <div class="panel_area">
+                <div id="panel2" class="tab_panel">
+                    <p>チーム投手成績</p>
+                    <p>チーム打者成績</p>
+                </div>
+            </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>
+<tr>
+    <!-- <th class="js-threshold pl_hideCell">&nbsp;</th> -->
+
+    <th>試<br>合<br>数</th>
+    <th>防<br>御<br>率</th>
+    <th>勝<br>数</th>
+    <th>負<br>数</th>
+    <th>勝<br>率</th>
+    <th>奪<br>三<br>振</th>
+    <th>与<br>四<br>球</th>
+    <th>与<br>死<br>球</th>
+    <th>被<br>安><br>打</th>
+</tr>
+<thead>
+<tbody>
+    <tr>
+        <!-- <td class="pl_hideCell">&nbsp;</td> -->
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+
+    </tr>
+</tbody>
+</table>
+</div>
+
+</div>
+</div>
+</div>
+
+</main>
+<style>

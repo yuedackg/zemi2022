@@ -1,0 +1,104 @@
+div {
+    box-sizing: border-box;
+    /* border: solid 1px gray; */
+    padding: 5px;
+}
+
+/* img {
+    width: 100px;
+    height: 100px;
+} */
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sixyouhinnmei {
+    font-size: 18pt;
+    font-weight: 900;
+    background-color: darkorange;
+}
+
+.smallpic {
+    justify-content: space-around;
+}
+
+.smallpic>div {
+    width: 40%;
+}
+
+/* .pagedomino {
+    display: block;
+} */
+header{
+    background-color: green;
+    color: blanchedalmond;
+    font-size: large;
+}
+.menuitem {
+    position: relative;
+
+}
+
+.menuitem .sixyouhinnmei {
+    position: absolute;
+    bottom: 0;
+}
+.menixyu-{
+    font-size: 18pt;
+    border-left: solid 10px red;
+    border-bottom: solid 2px red;
+    padding-left: 50px;
+    background-color: beige;
+}
+div {
+    box-sizing: border-box;
+    /* border: solid 1px gray; */
+    padding: 5px;
+}
+
+/* img {
+    width: 100px;
+    height: 100px;
+} */
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sixyouhinnmei {
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(200, 200, 0, 0.7);
+    height: 60px;
+    margin: auto auto;
+    
+}
+
+.smallpic {
+    justify-content: space-around;
+}
+
+.smallpic>div {
+    width: 40%;
+}
+
+.pagebennto {
+    /* display: block; */
+}
+.menuitem {
+    position: relative;
+
+}
+
+.menuitem .sixyouhinnmei {
+    position: absolute;
+    bottom: 0;
+}
+.centering{
+    text-align: center;
+}
