@@ -1,0 +1,198 @@
+<!-- 
+    【製作者情報】
+    学籍番号：
+    氏名：　　樋口
+ -->
+<!-- <link rel="stylesheet" href="./sample.css"> -->
+<link rel="stylesheet" href="./sokuhou.css">
+<link rel="stylesheet" href="ckgstyle.css">
+<style>
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    header,
+    nav,
+    main,
+    div {
+        box-sizing: border-box;
+    }
+
+    body {
+        display: flex;
+        flex-wrap: wrap;
+        /* width: var(--my-screen-wdith); */
+        width: var(--my-screen-width);
+        margin: auto;
+    }
+
+    header {
+        width: 1000%;
+        border: solid 1px red;
+    }
+
+    nav {
+        width: 20%;
+    }
+
+    main {
+        width: 80%;
+    }
+
+    .leftmeny {
+        width: 100%;
+    }
+
+    .MaeAtosiai {
+        justify-content: space-between;
+    }
+
+    th {
+        color: white;
+        background-color: green;
+    }
+
+    td {
+        color: white;
+        background-color: green;
+    }
+
+    .ScoreBoardName {
+        width: 200px;
+    }
+
+    td {
+        width: 50px;
+        border: solid 2px red;
+        padding: 5px;
+        text-align: center;
+    }
+
+    #headerSize {
+        width: 1000px;
+        height: 100px;
+    }
+
+    nav .leftmeny {
+        background-color: skyblue;
+        padding: 10px;
+        width: calc( 100% - 10 0px);
+        margin: 5px;
+        /* margin-right: -10px; */
+        /* box-sizing: border-box */
+    }
+    .higuti{
+        background-color: aqua;
+        
+    }
+</style>
+<!-- <header> -->
+<!-- header -->
+<!-- </header> -->
+<iframe src="./header.html" frameborder="0" scroling="no" id="headerSize"></iframe>
+<nav>
+    <div class="leftmeny">
+        試合情報トップ
+    </div>
+
+    <div class="leftmeny">
+        試合速報
+    </div>
+
+    <div class="leftmeny">
+        試合日程
+    </div>
+
+    <div class="leftmeny">
+        <a href="./playaerseiseki.html" target="content">選手成績</a>
+
+    </div>
+
+
+</nav>
+
+<main name="content">
+    <div class="higuti">
+        2022/10/29(金)
+    </div>
+
+    <div>
+        沖コンピューター対日本製鉄大分
+    </div>
+
+    <div class="container MaeAtosiai">
+        <div>前の試合</div>
+        <div>試合日程・結果</div>
+        <div>次の試合</div>
+    </div>
+
+    <div>
+        <div>
+            試合トップ
+        </div>
+
+        <div style="display: flex;flex-wrap:wrap">
+            <div>
+                沖コン
+            </div>
+            <div>
+                <img src="./img/CKGrogo.png" alt="">
+            </div>
+            <div>
+                12:00
+            </div>
+
+            <div>
+                日本製鉄大分
+            </div>
+            <div>
+                <img src="./img/unnamed.jpg" width="100px">
+            </div>
+        </div>
+    </div>
+    <table class="ScoreBoard">
+        <tr>
+            <th class="ScoreBoardName"></th>
+            <th class="ScoreBoardKai1">1</th>
+            <th class="ScoreBoardKai2">2</th>
+            <th class="ScoreBoardKai3">3</th>
+            <th class="ScoreBoardKai4">4</th>
+            <th class="ScoreBoardKai5">5</th>
+            <th class="ScoreBoardKai6">6</th>
+            <th class="ScoreBoardKai7">7</th>
+            <th class="ScoreBoardKai8">8</th>
+            <th class="ScoreBoardKai9">9</th>
+            <th class="ScoreBoardKaiKei">計</th>
+        </tr>
+        <tr>
+            <td>沖データ</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>1</td>
+            <td>0</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>7</td>
+        </tr>
+        <tr>
+            <td>日本製鉄大分</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>1</td>
+            <td>3</td>
+            <td>2</td>
+            <td>1</td>
+            <td>7</td>
+        </tr>
+
+
+
+
+</main>
