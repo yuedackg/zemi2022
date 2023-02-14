@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>アカデミー選手成績</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+        'use strict';
+
+        $(function () {
+
+            /**
+             * クリックイベント
+             */
+            $('th').click(function () {
+                // 情報取得
+                let ele = $(this).attr('id');
+                let sortFlg = $(this).data('sort');
+
+                // リセット
+                $('th').data('sort', "");
+
+                // ソート順序
+                if (sortFlg == "" || sortFlg == "desc") {
+                    sortFlg = "asc";
+                    $(this).data('sort', "asc");
+                } else {
+                    sortFlg = "desc";
+                    $(this).data('sort', "desc");
+                }
+
+                // テーブルソート処理
+                sortTable(ele, sortFlg);
+            });
+
+            /**
+             * テーブルソートメソッド
+             * 
+             * @param ele 
+             * @param sortFlg 
+             */
+            function sortTable(ele, sortFlg) {
+                let arr = $('table tbody tr').sort(function (a, b) {
+                    // ソート対象が数値の場合
+                    if ($.isNumeric($(a).find('td').eq(ele).text())) {
+                        let aNum = Number($(a).find('td').eq(ele).text());
+                        let bNum = Number($(b).find('td').eq(ele).text());
+
+                        if (sortFlg == "asc") {
+                            return aNum - bNum;
+                        } else {
+                            return bNum - aNum;
+                        }
+                    } else { // ソート対象が数値でない場合
+                        let sortNum = 1;
+
+                        // 比較時は小文字に統一
+                        if ($(a).find('td').eq(ele).text().toLowerCase() > $(b).find('td').eq(ele).text().toLowerCase()) {
+                            sortNum = 1;
+                        } else {
+                            sortNum = -1;
+                        }
+                        if (sortFlg == "desc") {
+                            sortNum *= (-1);
+                        }
+
+                        return sortNum;
+                    }
+                });
+                $('table tbody').html(arr);
+            }
+
+        });
+    </script>
+
+    <style>
+        .title {
+            font-size: 60px;
+            border-bottom: 1px solid;
+            border-color: gray;
+            border-width: 2px;
+            text-align: center;
+        }
+
+        nav div {
+            width: calc(800 / 4);
+            justify-content: space-around;
+        }
+
+        nav {
+            display: flex;
+            flex-direction: row;
+            box-sizing: border-box;
+        }
+
+        th,
+        td {
+            border: solid 1px black;
+            margin: 0;
+            background-color: white;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        table {
+            background-color: black;
+            margin-left: 100px;
+        }
+
+        .narabikae {
+            color: red;
+            padding-bottom: 10px;
+            margin-left: 100px;
+        }
+
+        .sennsyu {
+            font-size: 30px;
+            background-color: black;
+            color: white;
+            margin-left: 100px;
+        }
+
+        .hizuke {
+            text-align: right;
+            margin-right: 550px;
+        }
+
+        th {
+            background-color: rgb(238, 229, 229);
+            color: blue;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        nav {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="title">
+            アカデミー選手成績
+        </div>
+    </header>
+
+    <nav>
+        <div class="sennsyu">
+            個人成績
+            <div>
+    </nav>
+    
+    <div class="narabikae">
+        ※各項目をクリックすると昇順、降順に並べ替えれます。
+    </div>
+    
+    <table>
+        <thead>
+            <tr>
+                <th id="0" data-sort="">背番号</th>
+                <th id="1" data-sort="">選手名</th>
+                <th id="2" data-sort="">守備位置</th>
+                <th id="3" data-sort="">所 属</th>
+                <th id="4" data-sort="">打 率</th>
+                <th id="5" data-sort="">試合数</th>
+                <th id="6" data-sort="">打 席</th>
+                <th id="7" data-sort="">打 数</th>
+                <th id="8" data-sort="">安 打</th>
+                <th id="9" data-sort="">二塁打</th>
+                <th id="10" data-sort="">三塁打</th>
+                <th id="11" data-sort="">本塁打</th>
+                <th id="12" data-sort="">打 点</th>
+                <th id="13" data-sort="">三 振</th>
+                <th id="14" data-sort="">四死球</th>
+                <th id="15" data-sort="">盗 塁</th>
+                <th id="16" data-sort="">出塁率</th>
+            </tr>
+
+        </thead>
+
+
+        <tr>
+            <td>41</td>
+            <td> <a href="41mizutani.html">水谷　克希</a> </td>
+            <td>内野手</td>
+            <td>アカ</td>
+            <td>0.333</td>
+            <td>9</td>
+            <td>28</td>
+            <td>24</td>
+            <td>8</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+            <td>3</td>
+            <td>7</td>
+            <td>3</td>
+            <td>0</td>
+            <td>0.407</td>
+        </tr>
+
+        <tr>
+            <td>43</td>
+            <td> <a href="43sumida.html">角田　延大</a> </td>
+            <td>外野手</td>
+            <td>アカ</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td>47</td>
+            <td> <a href="47munaoka.html">宗岡　錬</a> </td>
+            <td>外野手</td>
+            <td>アカ</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td>51</td>
+            <td> <a href="51shibata.html">柴田　和典</a> </td>
+            <td>内野手</td>
+            <td>アカ</td>
+            <td>0.000</td>
+            <td>3</td>
+            <td>5</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0.000</td>
+        </tr>
+
+        <tr>
+            <td>57</td>
+            <td> <a href="57mayumi.html">真弓　大翔</a> </td>
+            <td>外野手</td>
+            <td>アカ</td>
+            <td>0.360</td>
+            <td>9</td>
+            <td>31</td>
+            <td>25</td>
+            <td>9</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>4</td>
+            <td>0.467</td>
+        </tr>
+
+        <tr>
+            <td>58</td>
+            <td> <a href="58honda.html">本多　将也</a> </td>
+            <td>内野手</td>
+            <td>アカ</td>
+            <td>0.350</td>
+            <td>10</td>
+            <td>46</td>
+            <td>40</td>
+            <td>14</td>
+            <td>3</td>
+            <td>0</td>
+            <td>0</td>
+            <td>5</td>
+            <td>1</td>
+            <td>6</td>
+            <td>4</td>
+            <td>0.435</td>
+        </tr>
+
+        <tr>
+            <td>96</td>
+            <td><a href="96kawabata.html">河端　太陽</a> </td>
+            <td>外野手</td>
+            <td>アカ</td>
+            <td>0.000</td>
+            <td>1</td>
+            <td>2</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0.500</td>
+        </tr>
+
+    </table>
+
+    <div class="hizuke">
+        <div>
+            2022/12/16現在
+        </div>
+    </div>
+
+
+</body>
+
+</html>
