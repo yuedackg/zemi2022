@@ -2,12 +2,16 @@
     製作者情報
     学籍番号：20066
     氏名：　　ひのゆうた
-    上位ページ：ー
+    上位ページ：index.html
     
 -->
 <!-- 
-    地図の場所がおかしい
-    背景を決める
+    ・地図の場所がおかしい ⇒　方法は提示済み　1/18　レイアウトの仕方は、別途ファイルを参照すること。
+    ・背景を決める
+    ・HTMLの整理を行うこと
+    　ソースコード中に散らばっている<style>～</style>をまとめること。
+    ・styleタグの中に書かれたCSSは、aceess―map.cssに移動すること。
+    ・titleタグの中身をきちんと記述すること。
  -->
 <!DOCTYPE html>
 <html lang="en">
@@ -18,9 +22,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        @import url(./ckg_style_const.css);
+
+        :root {
+            --my-content-width: 800px;
+
+        }
+
         body {
-            width: 800px;
-            margin: auto;
+            width: var(--my-content-width);
+            margin: 0 auto;
 
         }
 
@@ -131,10 +142,17 @@
         .headeraddress {
             width: 200px;
         }
+        footer {
+            border-top: solid 5px gray;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
     </style>
 </head>
 
 <body>
+
     <iframe src="./header.html" frameborder="no" width="1000px" height="130px" id="myHeader" scrolling="no"></iframe>
     <main>
         <img src="./アクセスマップY/1.jpg" alt="アクセスマップY" width="800" align="light">
@@ -177,14 +195,27 @@
 
         <div class="flex">
             <figure class="image"><img src="./アクセスマップY/6.jpg" alt="アクセスマップY" width="500px" height="300px"></figure>
+
+
+        </div>
+        <div style="width:30%;display:flex;flex-direction:column;border:solid 1px gray;">
             <p class="text"> 西畑球場は自然に囲まれた球場です。
                 夜でもナイター設備があるため時間を気にせずに練習をすることができます。
                 ボールの個数やゲージなどの環境面でも充実しており、存分に練習をすることが可能です。</p>
-                <br>
-                <span><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3327.741430801825!2d130.396695!3d33.4820821!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3541960c16ff15c1%3A0xe37f88f034c534e7!2z6KW_55WR6YGL5YuV5YWs5ZySIOmHjueQg-WgtA!5e0!3m2!1sja!2sjp!4v1673579677770!5m2!1sja!2sjp" width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></span>
+            <br><span><iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3327.741430801825!2d130.396695!3d33.4820821!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3541960c16ff15c1%3A0xe37f88f034c534e7!2z6KW_55WR6YGL5YuV5YWs5ZySIOmHjueQg-WgtA!5e0!3m2!1sja!2sjp!4v1673579677770!5m2!1sja!2sjp"
+                    width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe></span>
+            <a
+                href="https://www.google.co.jp/maps/place/%E8%A5%BF%E7%95%91%E9%81%8B%E5%8B%95%E5%85%AC%E5%9C%92+%E9%87%8E%E7%90%83%E5%A0%B4/@33.4820821,130.3945063,17z/data=!3m1!4b1!4m5!3m4!1s0x3541960c16ff15c1:0xe37f88f034c534e7!8m2!3d33.4821216!4d130.3966412">西畑球場</a>
+
         </div>
-        <a href="https://www.google.co.jp/maps/place/%E8%A5%BF%E7%95%91%E9%81%8B%E5%8B%95%E5%85%AC%E5%9C%92+%E9%87%8E%E7%90%83%E5%A0%B4/@33.4820821,130.3945063,17z/data=!3m1!4b1!4m5!3m4!1s0x3541960c16ff15c1:0xe37f88f034c534e7!8m2!3d33.4821216!4d130.3966412">西畑球場</a>
+
     </main>
+    <footer>
+        <div>copyright (c) 2023, Yuudai HINO , CKG Media Communication.
+        </div>
+    </footer>
 </body>
 
 </html>

@@ -1,10 +1,12 @@
-/* :root{
-    --my-text-color: bluel;
-} */
+@import url(./ckgbase.css);
+
+
 body{
-    width: 800px;
+    width: var(--my-content-width);
     margin: auto;
-    /* background-image:url(./img/allsyasinn.jpg); */
+    background-image:url(./image/iruka.png);
+    background-color: rgba(255, 255, 255, 0.8);
+    background-blend-mode: lighten;
     
 }
 
@@ -15,6 +17,7 @@ nav div{
     border: 1px solid blue;
 }
 nav{
+    font-weight: bold;
     font-size: 15px;
     display: flex;
     flex-direction: row;
@@ -90,15 +93,18 @@ a{
 .flex{
     display: flex;
     margin-left: 140px;
+    
 }
 .flex p{
     width: 64%;
+    font-size: 19px;
     text-align: left;
     margin-left: 80px;
     font-weight: bold;
+    background-color: #6eb7ff;
 }
 .namae{
-    width: 15%;
+    width: 20%;
 }
 .annnai{
     display: flex;
@@ -111,15 +117,26 @@ a{
     box-sizing: border-box;
     display: flex;
 }
+.box{
+    position: relative;
+}
+.bottom-left{
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    bottom: 1px;
+}
 .imgDOME{
-    width: 300px;
+    width: 340px;
+    height: 220px;
 }
 .imgOTOIAWASE{
-    width: 300px;
-    height: 230px;
+    width: 340px;
+    height: 220px;
 }
 th,td{
-    border: solid 1px blue;
+    border: solid 2px blue;
     margin: 0;
     background-color: skyblue;
     text-align: center;

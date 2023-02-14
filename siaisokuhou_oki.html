@@ -1,0 +1,66 @@
+<!-- 
+    【製作者情報】
+    学籍番号：
+    氏名：　 河端
+-->
+<!--
+    残件
+
+    
+-->
+<!-- <link rel="stylesheet" href="./sample.css"> -->
+<link rel="stylesheet" href="./sokuhou.css">
+<link rel="stylesheet" href="ckgstyle.css">
+<link rel="stylesheet" href="./higuchi.css">
+<style>
+
+#content{
+    height: 100vh;
+    width: 100%;
+}
+.headerSize{
+    width: 100%;
+}
+div,iframe {
+    border: solid 1px gray;
+
+}
+</style>
+<!-- <header> -->
+<!-- header -->
+<!-- </header> -->
+<iframe src="./header.html" frameborder="0" scroling="no" name="headerSize" id="headerSize" ></iframe>
+<nav>
+    <div class="leftmeny">
+        試合情報トップ
+    </div>
+
+    <div class="leftmeny">
+        試合速報
+    </div>
+
+    <div class="leftmeny">
+        試合日程
+    </div>
+    <div class="leftmeny">
+        <!-- https://www.will3in.co.jp/frontend-blog/article/shrink-webpage-with-iframe-responsive/ -->
+        <a href="./akaplayaerseiseki.html" target="content">選手成績</a>
+    </div>
+    <div class="leftmeny">
+        <!-- <a href="./teamscore.html" target="">チーム成績</a> -->
+        <a href="./ti-museiseki.html" target="content">チーム成績</a>
+
+    </div>
+    <div class="leftmeny">
+        <a href="./playaerseiseki.html" target="content">選手成績</a>
+
+    </div>
+
+
+
+</nav>
+
+<main name="content">
+    <iframe src="./siaisokuho-main.html" scrolling="no" frameborder="0" name="content" id="content" width="600px"></iframe>
+
+</main>

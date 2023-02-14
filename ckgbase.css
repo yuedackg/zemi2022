@@ -1,16 +1,6 @@
-:root {
-    --my-table-border-color: black;
-    --my-table-seiseki-midasi: rgb(74, 190, 236);
-    --my-table-header-color: ;
-    --my-table-cell-padding: 5px;
-    --my-section-bg-color: rgba(0, 102, 255, 0.533);
-    --my-screen-haba: 585px;
-    --my-screen-width: 1000px;
-    --my-next-button-color:white;
-    --my-next-button-background-color:black;
-    --my-previous-button-color:white;
-    --my-previous-button-background-color:black;
-    
-
+:root{
+    --my-text-color: bluel;
+    /* コンテンツの基準幅 */
+    --my-content-width:800px;
 
 }

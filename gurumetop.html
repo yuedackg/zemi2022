@@ -1,4 +1,15 @@
----------------------------------------------------------------------------------------------
+<div>
+    <div>絵の上に文字を重ね合わせる方法です</div>
+    <img src="./dummy-image/string on picture.png" alt=""><br>
+    <div>重ね合わせのボックスに名前を付ける必要があります。<br>
+    </div>
+    <img src="./dummy-image/string-on-picture-css.png" alt=""><br>
+    <div>
+        親要素に「postion 」
+    </div>
+</div>
+
+
 <!--
     【製作者情報】
     学籍番号： 20019
@@ -23,11 +34,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        :root{
-            --base-bg-color:rgb(241, 226, 226);
-        }
+        /* for debug. */
         div {
-            border: solid 1px red;
+            border: solid 1px gray;
+
+        }
+
+        /* end. */
+
+        :root {
+            --base-bg-color: rgb(241, 226, 226);
+        }
+
+        div {
             box-sizing: border-box;
             padding: 5px;
             margin: auto
@@ -63,7 +82,8 @@
         }
 
         main {
-            background-color: var(--base-bg-color);;
+            background-color: var(--base-bg-color);
+            ;
         }
 
         .moji {
@@ -78,7 +98,9 @@
         /* 残りの下のほうについてのデザイン */
     </style>
 </head>
-<div class="gakkou"><iframe src="./header.html" frameborder="no" width="1000px" height="130px" id="myHeader" scrolling="no"></iframe></div>
+<div class="gakkou"><iframe src="./header.html" frameborder="no" width="1000px" height="130px" id="myHeader"
+        scrolling="no"></iframe></div>
+
 <body>
     <main>
         <div>

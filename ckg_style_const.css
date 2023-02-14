@@ -1,0 +1,13 @@
+:root{
+    --my-table-border-color: black;
+    --my-table-seiseki-midasi: rgb(74, 190, 236);
+    --my-table-header-color: ;
+    --my-table-cell-padding: 5px;
+    --my-section-bg-color: rgba(0, 102, 255, 0.533);
+    --my-screen-haba: 585px;
+    --my-screen-width:   1000px;
+    --my-table-bg-color:black;
+    --my-tabke-frame-color:white;
+    --my-table-header-bg-color:skyblue;
+
+}

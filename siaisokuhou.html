@@ -5,76 +5,85 @@
 -->
 <!--
     残件
-
+    ・藤岡、田代のリンクの埋め込み（石川は完成）
     ・ボタンの形状確定
     
 -->
+<!-- <link rel="stylesheet" href="./sample.css"> -->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>試合速報</title>
-
-    <link rel="stylesheet" href="./siaisokuho.css">
+    <link rel="stylesheet" href="./sokuhou.css">
+    <link rel="stylesheet" href="ckgstyle.css">
+    <link rel="stylesheet" href="./higuchi.css">
     <style>
+        .content {
+            height: 100vh;
+            box-sizing: border-box;
+        }
 
+        body {
+            height: 100vh;
+            box-sizing: border-box;
+        }
     </style>
 </head>
 
-<body class="container">
+<body>
 
-    <iframe src="./header.html" frameborder="no" scroling="no" name="headerSize" id="myHeader" width="1000px"
-        height="130px"></iframe>
+    <header>
+        <iframe src="./header.html" frameborder="0" scroling="no" name="headerSize" id="headerSize"></iframe>
+
+    </header>
 
     <nav>
+        <!-- 樋口 -->
+        <!-- 試合情報トップと試合速報は同一画面 -->
         <div class="leftmeny">
-            <a href="./siaisokuho-main.html" target="main-content" title="樋口製作">試合情報トップ</a>
-
-
+            試合情報トップ
         </div>
-
+        <!-- 樋口 -->
         <div class="leftmeny">
-            <a href="./siaisokuho-main.html" target="main-content" title="樋口製作">試合速報</a>
-
+            試合速報
         </div>
-
-        <div class="leftmeny" title="山下 or 徳永">
+        <!-- 徳永 -->
+        <div class="leftmeny">
             試合日程
         </div>
         <div class="leftmeny">
-            <a href="./akaplayaerseiseki.html" target="main-content">選手成績</a>
-            <!--             
-            植田コメント
-            aタグのhref属性には表示させるページのファイル名を記述する
-            aタグのtarget属性は、「main-content」にすること
-            aタグと/aタグの間にメニュー名を記述する
-         -->
+            <!-- https://www.will3in.co.jp/frontend-blog/article/shrink-webpage-with-iframe-responsive/ -->
+            <a href="./akaplayaerseiseki.html" target="content">選手成績</a>
+        </div>
+        <div class="leftmeny">
+            <a href="./teamscore.html" target="content">チーム成績</a>
+
+        </div>
+        <!-- <div class="leftmeny">
+            <a href="./playaerseiseki.html" target="content">選手成績</a>
+
+        </div> -->
+
+        <div class="leftmeny">
+            <a href="./rinen.html" target="content">理念（後で消す）</a>
 
         </div>
         <div class="leftmeny">
-            <a href="./teamscore.html" target="main-content">チーム成績</a>
+            <a href="./players-1.html" target="content">選手情報</a>
 
         </div>
-        <div class="leftmeny">
-            <a href="./playaerseiseki.html" target="main-content">選手成績</a>
-
-        </div>
-
-
     </nav>
 
-    <style>
-
-    </style>
-    <link rel="stylesheet" href="./siaisokuho-main.css">
     <main name="content">
-        <iframe src="./siaisokuho-main.html" scrolling="no" frameborder="0" class="main-content"
-            name="main-content"></iframe>
+        <iframe src="./siaisokuho-main.html" scrolling="no" frameborder="0" name="content" width="600px"
+            height="1000px"></iframe>
 
     </main>
+
 </body>
 
 </html>
