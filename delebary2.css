@@ -1,0 +1,146 @@
+:root {
+    --my-cell-bg-color: red;
+    --my-cell-titlecolor: rgba(255, 255, 0, 0.5);
+}
+
+div {
+    box-sizing: border-box;
+    /* border: solid 1px gray; */
+    padding: 3px;
+}
+
+.titlebox>div:nth-child(1) {
+    width: 40%;
+
+}
+
+.titlebox>div:nth-child(2) {
+    width: calc(100% - 40%);
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+}
+
+.innerimg {
+    justify-content: center;
+
+}
+
+.baga {
+    background-color: var(--my-cell-bg-color);
+}
+
+header {
+    font-size: 25pt;
+    padding: 15px;
+}
+
+.meneitem {
+    position: relative;
+}
+
+.sixyouhinnmei {
+    position: absolute;
+    background-color: var(--my-cell-titlecolor);
+}
+
+.meneitem .sixyouhinnmei {
+    position: absolute;
+}
+
+.pagedomino {
+    display: none;
+}
+
+.pagebennto {
+    /* display: block; */
+}
+
+.smallpic>div {
+    width: 50%;
+}
+
+.niretu>div {
+    width: 47%;
+}
+
+.hafpiture {
+    position: relative;
+    background-color: var(--my-cell-bg-color);
+    margin: 5px;
+}
+
+.hafpituretitle {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    background-color: var(--my-cell-titlecolor);
+    color: white;
+    font-weight: 900;
+    text-align: center;
+}
+
+.tennpomei {
+    font-size: 20pt;
+    color: green;
+}
+
+.bentoitem {
+    position: relative;
+    background-color: var(--my-cell-bg-color);
+    margin: 5px;
+}
+
+.bentoname {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    background-color: var(--my-cell-titlecolor);
+    color: white;
+    font-weight: 900;
+    text-align: center;
+}
+
+.bentolist>div {
+    width: 45%;
+}
+
+nav {
+    display: flex;
+}
+
+nav>label {
+    width: calc(100% / 2);
+    border-radius: 15px;
+    padding: 5px;
+    text-align: center;
+    margin: 5px;
+    border: solid 1px gray;
+}
+
+.selector {
+    display: none;
+}
+
+main {
+    display: none;
+}
+
+#btnPizza:checked~.pagedomino {
+    display: block;
+}
+
+#btnBento:checked~.pagebennto {
+    display: block;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    border-top: 3px solid black;
+    margin-top: 15px;
+}
